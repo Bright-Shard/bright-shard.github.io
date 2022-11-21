@@ -1,0 +1,53 @@
+<div id="navbar-links">
+    {% assign navbarpages = site.pages | where: "navbar", "enabled" | sort: "order" %}
+    {% for navbarpage in navbarpages %}
+    
+        {% assign style = "fa-regular" %}
+        {% assign id = "" %}
+        {% assign classes = "navbar-item" %}
+        {% assign subpages = site.pages | where: "parent", navbarpage.name | sort: "order" %}
+
+        {% if page.name == navbarpage.name %}
+            {% assign style = "fa-solid" %}
+            {% assign id = "active-navbar-page" %}
+        {% elsif page.parent == navbarpage.name %}
+            {% assign style = "fa-solid" %}
+            {% assign id = "active-navbar-page" %}
+        {% endif %}
+
+        {% if subpages.size > 0 %}
+            {% assign classes = "contains-subpages " | append: classes %}
+        {% endif %}
+
+        <div id="{{ id }}" class="{{ classes }}">
+            <a href="{{ navbarpage.url }}">
+                <i class="{{ navbarpage.icon }} {{ style }}"></i>
+                <p>{{ navbarpage.title }}</p>
+            </a>
+            
+            {% if subpages.size > 0 %}
+                <div class="navbar-subpages">
+                    {% assign id = "" %}
+                    {% if page.name == navbarpage.name %}
+                        {% assign id = "active-subpage" %}
+                    {% endif %}
+                    <a href="{{ navbarpage.url }}" id="{{ id }}" class="navbar-subpage">
+                        {{ navbarpage.title }}
+                    </a>
+
+                    {% for subpage in subpages %}
+                        {% assign id = "" %}
+                        {% if page.name == subpage.name %}
+                            {% assign id = "active-subpage" %}
+                        {% endif %}
+
+                        <a href="{{ subpage.url }}" id="{{ id }}" class="navbar-subpage">
+                            {{ subpage.title }}
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+<div id="navbar-extras"></div>

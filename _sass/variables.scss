@@ -1,0 +1,98 @@
+// VARIABLES
+// Default sizes
+$screen-size: "large";
+$margin: 32px;
+// Default font sizes
+$icon-size: 30px;
+$icon-small-size: 25px;
+// FontAwesome font weights
+$fa-light-weight: 400;
+$fa-solid-weight: 900;
+// Background levels
+$bg-one: #1c1b1f;
+$bg-two: #2a2831;
+$bg-three: #35323e;
+// Colours
+$error: #f2b8b5;
+$primary: #d0bcff;
+$secondary: #ccc2dc;
+$text: #e6e1e5;
+$primary-bg: #4f378b;
+// Font sizes
+$header-size: 57px;
+$header-2-size: 28px;
+$text-size: 16px;
+$navbar-text-size: 12px;
+// Size of various page sections
+$navbar-width: 90px;
+$navbar-subpages-width: 200px;
+$gallery-item-width: 400px;
+
+
+
+// MIXINS
+@mixin mq($min_size, $max_size: false) {
+    @if not $max_size {
+        @media screen and (min-width: $min_size) {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: $min_size) and (max-width: $max_size) {
+            @content;
+        }
+    }
+}
+@mixin round($radius: 20px) {
+    border: 0px solid;
+    border-radius: $radius;
+}
+
+// Change the margins and $screen-size variable
+@mixin resize($new_size) {
+    $screen-size: $new_size !global;
+
+    @if $screen-size == "small" {
+        $margin: 8px !global;
+    }
+
+    @if $screen-size == "medium" {
+        $margin: 12px !global;
+    }
+
+    @if $screen-size == "large" {
+        $margin: 32px !global;
+    }
+}
+
+
+
+// FONTS
+/* All downloaded from Google Fonts */
+// Roboto
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('/assets/fonts/Roboto/Roboto-Light.ttf')
+}
+
+// Roboto Medium
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('/assets/fonts/Roboto/Roboto-Medium.ttf');
+}
+
+// Roboto Black
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('/assets/fonts/Roboto/Roboto-Black.ttf');
+}
+
+// Comfortaa
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf');
+}

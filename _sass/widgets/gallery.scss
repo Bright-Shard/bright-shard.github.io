@@ -1,0 +1,38 @@
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: $margin;
+}
+.gallery-item {
+    background-color: $bg-two;
+    
+    border-width: 0px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+
+    width: $gallery-item-width;
+
+    transition-duration: .4s;
+
+    img {
+        @include round(10px);
+        margin-bottom: 20px;
+    }
+    h1 {
+        margin: 0px 10px;
+        font-family: "Roboto-Medium";
+        font-size: 24px;
+    }
+    p {
+        margin: 10px;
+        font-family: "Roboto-Light";
+        font-size: 16px;
+    }
+}
+.gallery-item:hover {
+    background-color: $primary-bg;
+    scale: 1.05;
+}

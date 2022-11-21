@@ -1,0 +1,42 @@
+// Globals
+@import "variables";
+@import "default/layout";
+// Sections of the website
+@import "default/sections/navbar";
+@import "default/sections/titlebar";
+@import "default/sections/content";
+// Widgets
+@import "widgets/gallery";
+@import "widgets/horizontal-table";
+@import "widgets/scrolling-gallery";
+
+// Phones/small screens
+@include mq(0px, 599px) {
+    @include build-layout("small");
+}
+
+// Tablets/medium screens
+@include mq(600px, 839px) {
+    @include build-layout("medium");
+}
+
+// Laptops/large screens
+@include mq(840px) {
+    @include build-layout("large");
+}
+
+
+
+// UNIVERSAL STYLES
+// Since this is the only consistantly imported scss file,
+// global styles are set here
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style-type: none;
+}
+body {
+    background-color: $bg-one;
+}

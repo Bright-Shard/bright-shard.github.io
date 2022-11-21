@@ -1,0 +1,16 @@
+.horizontal-table {
+    tr {
+        th {
+            font-family: 'Roboto-Medium';
+        }
+        td {
+            i {
+                font-size: $icon-size;
+            }
+            img {
+                width: $icon-size;
+                height: $icon-size
+            }
+        }
+    }
+}

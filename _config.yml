@@ -1,21 +1,22 @@
 title: BrightShard
 email: brightshard@brightshard.dev
 description: >-
-  My open-source projects.
+  My open-source projects and blog.
 baseurl: ""
 url: "https://brightshard.dev"
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      # Enable blog-post TOC globally
-      toc: true
-      # Blog excerpt separator
-      excerpt_separator: <!--desc-->
 
 # Catch all errors at build-time
 liquid:
   error_mode: strict
   strict_filters: true
 strict_front_matter: true
+
+# Generate an Atom feed for the blog
+plugins:
+  - jekyll-feed
+
+# Feed config
+feed:
+  categories:
+    - updates
+    - tutorials

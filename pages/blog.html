@@ -14,7 +14,7 @@ icon: fa-rectangle-list
 <div class="gallery-flex" id="blog-posts">
     {% for post in site.posts %}
         <div class="card-elevated">
-            <img class="banner" src="/assets/blog-banners/{{ post.banner }}">
+            <img class="banner" src="{{ post.image }}">
             <h1>{{ post.title }}</h1>
             <p>{{ post.content | split: "<!--desc.start-->" | last | split: "<!--desc.end-->" | first | markdownify }}</p>
             <div class="actions">

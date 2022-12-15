@@ -2,8 +2,8 @@
 layout: post
 parent: blog.html
 title: Pure CSS Material 3 (Part 2)
-banner: material.png
-categories: programming
+image: /assets/blog-banners/material.png
+category: tutorials
 ---
 
 <!--desc.start-->

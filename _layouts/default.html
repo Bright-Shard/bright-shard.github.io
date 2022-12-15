@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {%- include head.html -%}
+        {% include head.html title=page.title %}
+        <link href="/assets/default.css" rel="stylesheet">
     </head>
     <body>
-        <div id="navbar">
-            {%- include navbar.html -%}
+        <div id="navigation">
+            {% include navigation.html %}
         </div>
 
         <div id="titlebar">
-            {%- include titlebar.html -%}
+            {% include titlebar.html title=page.title %}
         </div>
         
         <div id="content">

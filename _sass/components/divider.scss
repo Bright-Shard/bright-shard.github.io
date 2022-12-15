@@ -1,0 +1,11 @@
+.divider {
+    --margin: 28px;
+    
+    height: 0px;
+    width: calc(var(--width) - (var(--margin) * 2));
+    margin: 0px var(--margin);
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 1px;
+    color: var(--outline-variant);
+}

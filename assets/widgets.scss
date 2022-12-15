@@ -1,0 +1,27 @@
+---
+---
+
+@import "variables";
+@import "components/navigation/rail";
+@import "components/navigation/drawer";
+@import "custom/titlebar";
+@import "components/divider";
+@import "components/cards";
+@import "components/buttons/common";
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+body {
+    background-color: var(--surface);
+    margin: 0px;
+    padding: 50px;
+
+    position: absolute;
+    z-index: -2;
+
+    height: 100%;
+    width: 100%;
+}

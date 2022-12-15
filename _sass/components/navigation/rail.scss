@@ -1,0 +1,115 @@
+// Navigation rail
+.navigation-rail {
+    position: fixed;
+    height: 100%;
+    width: 80px;
+
+    background-color: var(--surface-2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    row-gap: 12px;
+    padding-top: 12px;
+
+    // Before item to mask subpages (it's complicated)
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        display: block;
+        background-color: var(--surface-2);
+        height: 100%;
+        width: 80px;
+        z-index: -1;
+    }
+}
+
+// Each nav item in the navigation rail
+.navigation-page {
+    width: 80px;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        row-gap: 4px;
+
+        text-decoration: none;
+
+        // The labels for nav items in the navigation rail
+        > p {
+            color: var(--on-surface-variant);
+            font-weight: var(--label-font);
+            font-size: var(--label-medium);
+            margin: 0px;
+        }
+        // The icons for nav items in the navigation rail
+        > i {
+            padding-top: 4px;
+            font-size: 24px;
+            color: var(--on-surface-variant);
+            width: 56px;
+            height: 32px;
+            position: relative;
+
+            @include state_layer(var(--on-surface-variant), 16px);
+        }
+
+        // Hover animation
+        &:hover > i::after {
+            opacity: var(--state-layer-opacity-hover);
+        }
+    }
+
+    // The active page gets fancy stylings
+    > #active-page {
+        > p {
+            color: var(--on-surface) !important;
+        }
+        > i {
+            color: var(--on-secondary-container) !important;
+            background-color: var(--secondary-container) !important;
+            @include round(16px);
+
+            // State layer
+            &::after {
+                background-color: var(--on-surface) !important;
+            }
+        }
+    }
+}
+
+// The subpages for a navigation rail item
+.contains-subpages > div {
+    --width: 200px;
+    --item-gap: 5px;
+    --item-height: 45px;
+
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: calc(var(--width) * -1);
+
+    transition-duration: .4s;
+
+    border-style: solid;
+    border-width: 0px;
+    border-left-width: 1px;
+    border-color: var(--outline-variant);
+}
+
+// Slideout animation for subpages
+.contains-subpages:hover > div {
+    left: 80px;
+}
+
+// Colour active subpage
+#active-subpage {
+    color: var(--on-secondary-container) !important;
+    background-color: var(--secondary-container) !important;
+    @include round(28px);
+}

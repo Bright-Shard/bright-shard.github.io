@@ -1,0 +1,64 @@
+// UNIVERSAL STYLES
+* {
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background-color: var(--surface);
+    margin: 0px;
+
+    position: absolute;
+    z-index: -2;
+
+    height: 100%;
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: var(--navigation-width) 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-column-gap: var(--margin);
+    grid-row-gap: var(--margin);
+}
+
+#navigation {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 100%;
+}
+#titlebar {
+    grid-column: 2;
+    grid-row: 1;
+    height: 100px;
+    width: 100%;
+}
+#content {
+    grid-column: 2;
+    grid-row: 2;
+    height: 1fr;
+    width: 1fr;
+}
+
+
+
+// VARIABLES
+// They're in a different file because HOLY CRAP THERE'S SO MANY
+@import "variables";
+
+// M3 COMPONENTS
+// Navigation components
+@import "components/navigation/rail";
+@import "components/navigation/drawer";
+// Button components
+@import "components/buttons/common";
+@import "components/buttons/fab";
+// Custom components
+@import "custom/titlebar";
+@import "custom/content";
+@import "custom/gallery";
+// Everything else
+@import "components/divider";
+@import "components/cards";

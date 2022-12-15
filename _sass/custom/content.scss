@@ -1,0 +1,33 @@
+#content {
+    position: absolute;
+    z-index: -2;
+
+    font-weight: var(--body-font);
+    color: var(--on-surface);
+    padding-right: var(--margin);
+    padding-bottom: var(--margin);
+    width: 100%;
+
+    > h1 {
+        font-size: var(--display-medium);
+        font-weight: var(--display-font);
+        margin: 0;
+        margin-bottom: var(--margin);
+    }
+
+    > h2 {
+        font-size: var(--display-small);
+        font-weight: var(--display-font);
+        margin: 0;
+        margin-bottom: calc(var(--margin) / 2);
+    }
+
+    > p {
+        margin: 0;
+
+        > a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+    }
+}

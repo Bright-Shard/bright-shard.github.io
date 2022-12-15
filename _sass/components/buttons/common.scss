@@ -1,0 +1,79 @@
+// Common button styles (layout/size)
+.button-elevated, .button-filled, .button-tonal, .button-outlined, .button-text {
+    // Flexbox for text & icon
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+
+    // Basic button shape
+    height: 40px;
+    width: fit-content;
+    padding: 0px 24px;
+    position: relative;
+    z-index: 0;
+    @include round(20px);
+
+    // Button text
+    font-weight: var(--label-font);
+    font-size: var(--label-large);
+    text-decoration: none;
+
+    // Button icon
+    > i {
+        margin-left: -8px;
+        font-size: 18px;
+    }
+
+    // Although the state layer colour changes,
+    //  all buttons have the hover state layer.
+    &:hover::after {
+        opacity: var(--state-layer-opacity-hover);
+    }
+}
+
+.button-elevated {
+    background-color: var(--surface-1);
+    box-shadow: var(--shadow);
+    color: var(--primary);
+    @include state_layer(var(--primary), 20px);
+
+    // The elevated button's elevation changes on hover
+    &:hover {
+        background-color: var(--surface-2);
+    }
+}
+
+.button-filled {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    @include state_layer(var(--on-primary), 20px);
+}
+
+.button-tonal {
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+    transition-duration: .4s;
+    @include state_layer(var(--on-secondary-container), 20px);
+
+    // The tonal buttons' elevation changes on hover
+    &:hover {
+        box-shadow: var(--shadow);
+    }
+}
+
+.button-outlined {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--outline);
+    border-radius: 20px;
+
+    color: var(--primary);
+    @include state_layer(var(--primary), 20px);
+}
+
+.button-text {
+    color: var(--primary);
+    @include state_layer(var(--primary), 20px);
+}

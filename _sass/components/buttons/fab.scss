@@ -1,0 +1,34 @@
+// Floating Action Button (FAB)
+.fab, .fab-large {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 0;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+
+    @include round(16px);
+    @include state_layer(var(--on-primary-container), 16px);
+
+    &:hover::after {
+        opacity: var(--state-layer-opacity-hover);
+    }
+}
+
+.fab {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+}
+
+.fab-large {
+    width: 96px;
+    height: 96px;
+    font-size: 36px;
+}

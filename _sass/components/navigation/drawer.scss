@@ -1,0 +1,90 @@
+// Standard navigation drawer styles
+.navigation-drawer, .navigation-drawer-modal {
+    --width: 360px;
+    --item-gap: 16px;
+    --item-height: 56px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--item-gap);
+    width: var(--width);
+    height: 100%;
+    padding-top: 16px;
+
+    // Nav drawer labels
+    > h1 {
+        color: var(--on-surface-variant);
+        font-weight: var(--title-font);
+        font-size: var(--title-small);
+        margin: 0px 28px;
+    }
+
+    // Each nav drawer item/link
+    > a {
+        --margin: 12px;
+
+        height: var(--item-height);
+        width: calc(var(--width) - calc(var(--margin) * 2));
+        padding-left: 16px;
+        padding-right: 24px;
+        margin: 0px var(--margin);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        column-gap: var(--margin);
+
+        color: var(--on-surface-variant);
+        font-weight: var(--label-font);
+        font-size: var(--label-large);
+        text-decoration: none;
+
+        position: relative;
+
+        > i {
+            font-size: 24px;
+        }
+
+        > .badge {
+            justify-self: end;
+        }
+
+        @include state_layer(var(--on-surface-variant), 28px);
+
+        // Hover animation
+        &:hover::after {
+            opacity: var(--state-layer-opacity-hover);
+        }
+    }
+
+
+
+    // Active page is a lil funky
+    > #active-page {
+        color: var(--on-secondary-container) !important;
+        background-color: var(--secondary-container) !important;
+        @include round(28px);
+
+        // State layer
+        &::after {
+            background-color: var(--on-secondary-container) !important;
+        }
+    }
+}
+
+// Colour and border for the standard nav drawer
+//  is different from the modal drawer
+.navigation-drawer {
+    background-color: var(--surface);
+}
+.navigation-drawer-modal {
+    background-color: var(--surface-2);
+
+    border-style: solid;
+    border-width: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}

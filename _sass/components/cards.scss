@@ -1,0 +1,95 @@
+// Common styles - only the colours/borders really changes between all 3
+.card-elevated, .card-filled, .card-outlined {
+    // Set to 1 to enable hover animations
+    --hover: 0;
+
+    // State layer and rounded corners
+    @include state_layer(var(--on-surface), 12px);
+    @include round(12px);
+
+    // State layer hover state
+    &:hover::after {
+        opacity: calc(var(--state-layer-opacity-hover) * var(--hover));
+    }
+
+    // Display stuffs
+    position: relative;
+    padding: 16px;
+    height: 100%;
+    z-index: 0;
+
+    // Flexbox, to space elements
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    // Default content styles
+    // Large images/banners
+    & > .banner {
+        width: calc(100% + 32px);
+        min-height: 0%;
+        object-fit: cover;
+        object-position: top left;
+
+        position: relative;
+        margin: -16px;
+        margin-bottom: 0px;
+
+        @include round(12px);
+    }
+    // Headline
+    & > h1 {
+        font-weight: var(--display-font);
+        font-size: var(--display-small);
+        margin: 0px;
+    }
+    // Subhead
+    & > h2 {
+        font-weight: var(--title-font);
+        font-size: var(--title-medium);
+        margin: 0px;
+    }
+    // Text
+    & > p {
+        font-weight: var(--body-font);
+        font-size: var(--body-medium);
+        line-height: 1.5;
+        margin: 0px;
+        
+        // Links
+        a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+    }
+    // Action row
+    & > .actions {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 8px;
+    }
+}
+
+// Elevated card
+.card-elevated {
+    background-color: var(--surface-1);
+    box-shadow: var(--shadow);
+}
+
+// Filled card
+.card-filled {
+    background-color: var(--surface-1);
+}
+
+// Outlined card
+.card-outlined {
+    background-color: var(--surface);
+    
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: var(--outline);
+}

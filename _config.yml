@@ -1,6 +1,25 @@
 title: BrightShard
 email: brightshard@brightshard.dev
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   My open-source projects.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://brightshard.dev" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://brightshard.dev"
+
+plugins:
+  # Generate a TOC for blog posts (https://github.com/toshimaru/jekyll-toc)
+  - jekyll-toc
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      # Enable blog-post TOC globally
+      toc: true
+      # Blog excerpt separator
+      excerpt_separator: <!--desc-->
+
+# Catch all errors at build-time
+liquid:
+  error_mode: strict
+  strict_filters: true
+strict_front_matter: true

@@ -25,19 +25,6 @@
             </div>
 
             <div id="reading-menu" class="gallery-flex">
-                {% assign next = page.next %}
-                {% if next %}
-                    <div class="card-filled">
-                        <h1>Next Post</h1>
-                        <h2>{{ next.title }}</h2>
-                        <p>{{ next.content | split: "<!--desc.start-->" | last | split: "<!--desc.end-->" | first | markdownify }}</p>
-                        <div class="actions">
-                            <a class="button-text" href="/blog/">All Posts</a>
-                            <a class="button-outlined" href="{{ next.url }}">Read Post</a>
-                        </div>
-                    </div>
-                {% endif %}
-
                 {% assign previous = page.previous %}
                 {% if previous %}
                     <div class="card-filled">
@@ -47,6 +34,19 @@
                         <div class="actions">
                             <a class="button-text" href="/blog/">All Posts</a>
                             <a class="button-outlined" href="{{ previous.url }}">Read Post</a>
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% assign next = page.next %}
+                {% if next %}
+                    <div class="card-filled">
+                        <h1>Next Post</h1>
+                        <h2>{{ next.title }}</h2>
+                        <p>{{ next.content | split: "<!--desc.start-->" | last | split: "<!--desc.end-->" | first | markdownify }}</p>
+                        <div class="actions">
+                            <a class="button-text" href="/blog/">All Posts</a>
+                            <a class="button-outlined" href="{{ next.url }}">Read Post</a>
                         </div>
                     </div>
                 {% endif %}

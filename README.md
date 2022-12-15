@@ -10,7 +10,7 @@ My GitHub Pages site (WIP).
   - [x] Material 3 cards component (for blog & projects)
   - [x] Material 3 common buttons components (for cards)
   - [x] Material 3 FAB (floating action button)
-  - [ ] ~~RSS~~ Atom feed
+  - [x] ~~RSS~~ Atom feed
 - [ ] Projects page
 - [ ] About Me pages
 - [ ] Home page

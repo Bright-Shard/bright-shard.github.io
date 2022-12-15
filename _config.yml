@@ -17,6 +17,7 @@ plugins:
 
 # Feed config
 feed:
+  disable_in_development: true
   categories:
     - updates
     - tutorials

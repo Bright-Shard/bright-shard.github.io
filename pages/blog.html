@@ -6,6 +6,7 @@ navbar: enabled
 order: 4
 icon: fa-rectangle-list
 ---
+<h1>Blog Posts</h1>
 <style>
     #blog-posts {
         --row-size: min-content;
@@ -23,3 +24,14 @@ icon: fa-rectangle-list
         </div>
     {% endfor %}
 </div>
+
+<div class="divider"></div>
+
+<h1>Blog Feeds</h1>
+<a id="feeds"></a>
+<p>Here are the Atom (think of Atom like RSS v3) feeds for my blog:</p>
+<ul>
+    <li><a href="/feed.xml">Everything</a>: Every post in the blog</li>
+    <li><a href="/feed/updates.xml">Updates</a>: Only posts about updates on my projects</li>
+    <li><a href="/feed/tutorials.xml">Tutorials</a>: Only tutorial posts on my blog</li>
+</ul>

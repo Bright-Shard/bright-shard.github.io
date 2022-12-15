@@ -18,6 +18,10 @@
     height: 100%;
     z-index: 0;
 
+    // Text fixes
+    text-decoration: none;
+    color: inherit;
+
     // Flexbox, to space elements
     display: flex;
     flex-direction: column;
@@ -55,12 +59,6 @@
         font-size: var(--body-medium);
         line-height: 1.5;
         margin: 0px;
-        
-        // Links
-        a {
-            color: var(--primary);
-            text-decoration: underline;
-        }
     }
     // Action row
     & > .actions {

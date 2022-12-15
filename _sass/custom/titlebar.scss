@@ -13,6 +13,11 @@
     z-index: -2;
     padding: 0px;
     padding-right: var(--margin);
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 #subtitle {
@@ -41,7 +46,7 @@
         }
 
         // Hover animation
-        &:hover > i {
+        &:hover > * {
             font-size: 40px;
             color: var(--primary);
         }

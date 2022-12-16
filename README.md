@@ -10,8 +10,48 @@ My GitHub Pages site (WIP).
   - [x] Material 3 cards component (for blog & projects)
   - [x] Material 3 common buttons components (for cards)
   - [x] Material 3 FAB (floating action button)
-  - [x] ~~RSS~~ Atom feed
-- [ ] Projects page
+  - [x] ~~RSS~~ Atom feed for blog
+- [ ] Projects
+  - [x] Main projects page
+  - [ ] Pages for each of my projects
+    - [ ] bevy_adventure
+      - [x] Description
+      - [ ] Example code
+      - [ ] Link to example game
+    - [ ] HiddenHID
+      - [ ] Description
+      - [ ] Demo attack
+    - [ ] Cookie Clicker++
+      - [ ] Description
+      - [ ] How to install
+      - [ ] How to use
 - [ ] About Me pages
+  - [ ] Languages/programming page
+    - [ ] Rust
+    - [ ] CSS
+    - [ ] HTML
+    - [ ] Python slander
+    - [ ] JS slander
+    - [ ] C++ slander
+  - [ ] Cybersecurity page
+    - [ ] HackTheBox profile
+    - [ ] TryHackMe profile
+    - [ ] General skills description
+  - [ ] Robotics page
+    - [ ] Roombot
+    - [ ] Zebracorns
 - [ ] Home page
-- [ ] Responsive layout for mobile
+  - [ ] Fancy animations for the landing page
+- [ ] Responsive layout
+  - [x] Large screens
+  - [ ] Medium screens
+    - [ ] Decrease margin size
+    - [ ] Reduce the number of gallery items (eg 1 or 2 per row instead of 3)
+  - [ ] Small screens
+    - [ ] Switch navigation rail for navigation bar
+    - [ ] Decrease margin size
+    - [ ] Reduce the number of gallery items (eg 1 or 2 per row instead of 3)
+- [ ] Material 3 Jekyll theme
+  - [ ] Make a custom Jekyll theme with Material 3 components
+  - [ ] Move Jekyll theme to a different repo
+  - [ ] Make this site use that theme

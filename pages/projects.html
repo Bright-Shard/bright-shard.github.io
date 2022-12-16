@@ -7,30 +7,16 @@ order: 2
 icon: fa-folder
 ---
 
-<div class="gallery">
-    <a class="card-elevated">
-        <img class="banner" src="/assets/images/code.jpg">
-        <h1>Gallery Item</h1>
-        <p>Gallery Description - this can be really really long because stuff where descriptions are long as hell</p>
-    </a>
-    <a class="card-elevated">
-        <img class="banner" src="/assets/images/code.jpg">
-        <h1>Gallery Item</h1>
-        <p>Gallery Description - this can be really really long because stuff where descriptions are long as hell</p>
-    </a>
-    <a class="card-elevated">
-        <img class="banner" src="/assets/images/code.jpg">
-        <h1>Gallery Item</h1>
-        <p>Gallery Description - this can be really really long because stuff where descriptions are long as hell</p>
-    </a>
-    <a class="card-elevated">
-        <img class="banner" src="/assets/images/code.jpg">
-        <h1>Gallery Item</h1>
-        <p>Gallery Description - this can be really really long because stuff where descriptions are long as hell</p>
-    </a>
-    <a class="card-elevated">
-        <img class="banner" src="/assets/images/code.jpg">
-        <h1>Gallery Item</h1>
-        <p>Gallery Description - this can be really really long because stuff where descriptions are long as hell</p>
-    </a>
+<div class="gallery-flex">
+    {% for project in site.projects %}
+        <div class="card-elevated">
+            <img class="banner" src="/assets/project-banners/{{ project.image }}">
+            <h1>{{ project.title }}</h1>
+            <p>{% include desc.html content=project.content %}</p>
+            <div class="actions">
+                <a {% include link.html %} href="https://github.com/bright-shard/{{ project.github }}" class="button-text">View Source Code</a>
+                <a href="{{ project.url }}" class="button-outlined">More Information</a>
+            </div>
+        </div>
+    {% endfor %}
 </div>

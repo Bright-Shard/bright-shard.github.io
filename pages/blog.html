@@ -17,7 +17,7 @@ icon: fa-rectangle-list
         <div class="card-elevated">
             <img class="banner" src="{{ post.image }}">
             <h1>{{ post.title }}</h1>
-            <p>{{ post.content | split: "<!--desc.start-->" | last | split: "<!--desc.end-->" | first | markdownify }}</p>
+            <p>{% include desc.html content=post.content %}</p>
             <div class="actions">
                 <a class="button-outlined" href="{{ post.url }}">Read Post</a>
             </div>

@@ -11,6 +11,13 @@ liquid:
   strict_filters: true
 strict_front_matter: true
 
+# Custom page collections
+collections:
+  # Collection for all of my projects
+  projects:
+    output: true
+    permalink: /:collection/:name
+
 # Generate an Atom feed for the blog
 plugins:
   - jekyll-feed

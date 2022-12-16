@@ -22,6 +22,9 @@
             <div id="toc-wrapper" class="card-filled">
                 <h1>In this post...</h1>
                 {% include toc.html html=content id='toc' %}
+                <div class="actions">
+                    <a class="button-outlined" href="/blog/">View All Posts</a>
+                </div>
             </div>
 
             <div id="reading-menu" class="gallery-flex">
@@ -30,7 +33,7 @@
                     <div class="card-filled">
                         <h1>Previous Post</h1>
                         <h2>{{ previous.title }}</h2>
-                        <p>{{ previous.content | split: "<!--desc.start-->" | last | split: "<!--desc.end-->" | first | markdownify }}</p>
+                        <p>{% include desc.html content=previous.content %}</p>
                         <div class="actions">
                             <a class="button-text" href="/blog/">All Posts</a>
                             <a class="button-outlined" href="{{ previous.url }}">Read Post</a>
@@ -43,7 +46,7 @@
                     <div class="card-filled">
                         <h1>Next Post</h1>
                         <h2>{{ next.title }}</h2>
-                        <p>{{ next.content | split: "<!--desc.start-->" | last | split: "<!--desc.end-->" | first | markdownify }}</p>
+                        <p>{% include desc.html content=next.content %}</p>
                         <div class="actions">
                             <a class="button-text" href="/blog/">All Posts</a>
                             <a class="button-outlined" href="{{ next.url }}">Read Post</a>

@@ -1,19 +1,9 @@
 // Common styles - only the colours/borders really changes between all 3
 .card-elevated, .card-filled, .card-outlined {
-    // Set to 1 to enable hover animations
-    --hover: 0;
-
-    // State layer and rounded corners
-    @include state_layer(var(--on-surface), 12px);
+    // Round corners
     @include round(12px);
 
-    // State layer hover state
-    &:hover::after {
-        opacity: calc(var(--state-layer-opacity-hover) * var(--hover));
-    }
-
     // Display stuffs
-    position: relative;
     padding: 16px;
     height: 100%;
     z-index: 0;

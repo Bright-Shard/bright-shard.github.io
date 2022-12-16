@@ -1,5 +1,6 @@
 ---
 layout: project
+parent: projects.html
 title: Bevy Adventure
 github: bevy_adventure
 image: code.jpg

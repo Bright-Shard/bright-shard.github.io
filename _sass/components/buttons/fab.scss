@@ -15,11 +15,7 @@
     right: 16px;
 
     @include round(16px);
-    @include state_layer(var(--on-primary-container), 16px);
-
-    &:hover::after {
-        opacity: var(--state-layer-opacity-hover);
-    }
+    @include state_layer(var(--on-primary-container), 16px, false);
 }
 
 .fab {

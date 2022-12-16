@@ -1,0 +1,50 @@
+.button-icon, .button-icon-enabled, .button-icon-disabled {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    color: var(--on-surface-variant);
+    @include state_layer(var(--on-surface-variant), 30px);
+
+    &::after {
+        width: 40px;
+        height: 40px;
+        top: 4px;
+        left: 4px;
+    }
+
+    // Icon
+    > i {
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+    }
+
+    // Tooltip
+    > p {
+        white-space: nowrap;
+        font-weight: var(--label-font);
+        font-size: var(--label-small);
+        color: var(--on-surface);
+        background-color: var(--surface-5);
+
+        opacity: 0;
+        transition-duration: .6s;
+
+        position: absolute;
+        margin-top: 75px;
+        padding: 1px 3px;
+        @include round(5px);
+    }
+
+    // Show tooltip on hover
+    &:hover > p {
+        opacity: 1;
+        padding: 1px 7px;
+    }
+}

@@ -54,7 +54,6 @@
             color: var(--on-surface-variant);
             width: 56px;
             height: 32px;
-            position: relative;
 
             @include state_layer(var(--on-surface-variant), 16px);
         }

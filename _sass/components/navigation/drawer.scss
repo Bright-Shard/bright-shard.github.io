@@ -40,22 +40,12 @@
         font-size: var(--label-large);
         text-decoration: none;
 
-        position: relative;
-
         > i {
             font-size: 24px;
         }
 
-        > .badge {
-            justify-self: end;
-        }
-
+        // State layer
         @include state_layer(var(--on-surface-variant), 28px);
-
-        // Hover animation
-        &:hover::after {
-            opacity: var(--state-layer-opacity-hover);
-        }
     }
 
 

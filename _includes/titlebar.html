@@ -1,19 +1,23 @@
 <a href="/">BrightShard <span id="subtitle">| {{ include.title }}</span></a>
 
 <div id="social-links">
-    <a href="https://github.com/bright-shard" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/bright-shard" {% include link.html %} class="button-icon">
         <i class="fa-brands fa-github-alt" aria-hidden="true"></i>
+        <p>View my GitHub profile</p>
     </a>
 
-    <a href="https://twitter.com/bright_shard" target="_blank" rel="noopener noreferrer">
+    <a href="https://twitter.com/bright_shard" {% include link.html %} class="button-icon">
         <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+        <p>View my Twitter profile</p>
     </a>
     
-    <a href="mailto:brightshard@brightshard.dev" rel="noopener noreferrer">
+    <a href="mailto:brightshard@brightshard.dev" {% include link.html %} class="button-icon">
         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <p>Email me</p>
     </a>
 
-    <a href="/blog#feeds">
+    <a href="/blog#feeds" class="button-icon">
         <i class="fa-solid fa-square-rss"></i>
+        <p>View my blog feeds</p>
     </a>
 </div>

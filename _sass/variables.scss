@@ -145,12 +145,18 @@
 
 // MIXINS
 // Round corners without showing the border
-@mixin round($radius: 20px) {
+@mixin round($radius) {
     border: 0px solid;
     border-radius: $radius;
 }
 // Build a state layer for an element
-@mixin state_layer($colour, $radius) {
+@mixin state_layer($colour, $radius, $override-position: true) {
+    z-index: 0;
+    
+    @if $override-position {
+        position: relative;
+    }
+
     &::after {
         content: "";
         display: block;
@@ -167,5 +173,9 @@
         z-index: -1;
 
         @include round($radius);
+    }
+
+    &:hover::after {
+        opacity: var(--state-layer-opacity-hover);
     }
 }

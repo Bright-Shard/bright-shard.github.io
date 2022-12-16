@@ -48,11 +48,31 @@ All of the currently implemented Material 3 components, and what needs to be imp
     - [ ] Focused
     - [ ] Pressed
   - [ ] Icon
-    - [ ] Enabled
-    - [ ] Disabled
-    - [ ] Hovered
-    - [ ] Focused
-    - [ ] Pressed
+    - [ ] Standard
+      - [ ] Enabled
+      - [ ] Disabled
+      - [ ] Hovered
+      - [ ] Focused
+      - [ ] Pressed
+    - [ ] Contained
+      - [ ] Filled
+        - [ ] Enabled
+        - [ ] Disabled
+        - [ ] Hovered
+        - [ ] Focused
+        - [ ] Pressed
+      - [ ] Tonal
+        - [ ] Enabled
+        - [ ] Disabled
+        - [ ] Hovered
+        - [ ] Focused
+        - [ ] Pressed
+      - [ ] Outlined
+        - [ ] Enabled
+        - [ ] Disabled
+        - [ ] Hovered
+        - [ ] Focused
+        - [ ] Pressed
   - [ ] Segmented
     - [ ] Enabled
     - [ ] Disabled
@@ -67,7 +87,7 @@ All of the currently implemented Material 3 components, and what needs to be imp
     - [x] Action row
     - [x] Enabled
     - [ ] Disabled
-    - [x] Hovered
+    - [ ] Hovered
     - [ ] Focused
     - [ ] Pressed
     - [ ] Dragged
@@ -78,7 +98,7 @@ All of the currently implemented Material 3 components, and what needs to be imp
     - [x] Action row
     - [x] Enabled
     - [ ] Disabled
-    - [x] Hovered
+    - [ ] Hovered
     - [ ] Focused
     - [ ] Pressed
     - [ ] Dragged
@@ -89,7 +109,7 @@ All of the currently implemented Material 3 components, and what needs to be imp
     - [x] Action row
     - [x] Enabled
     - [ ] Disabled
-    - [x] Hovered
+    - [ ] Hovered
     - [ ] Focused
     - [ ] Pressed
     - [ ] Dragged

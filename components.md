@@ -1,0 +1,143 @@
+# Components to-do list
+All of the currently implemented Material 3 components, and what needs to be implemented in the future. If a component isn't planned, I might never actually implement it, probably because I won't need it.
+[Back to README](README.md)
+
+- [ ] Badges (not planned)
+- [ ] Bottom App Bar (not planned)
+- [ ] Bottom Sheets (not planned)
+- [ ] Buttons
+  - [ ] Common
+    - [ ] Elevated
+      - [x] Enabled
+      - [ ] Disabled
+      - [x] Hovered
+      - [ ] Focused
+      - [ ] Pressed
+    - [ ] Filled
+      - [x] Enabled
+      - [ ] Disabled
+      - [x] Hovered
+      - [ ] Focused
+      - [ ] Pressed
+    - [ ] Tonal
+      - [x] Enabled
+      - [ ] Disabled
+      - [x] Hovered
+      - [ ] Focused
+      - [ ] Pressed
+    - [ ] Outlined
+      - [x] Enabled
+      - [ ] Disabled
+      - [x] Hovered
+      - [ ] Focused
+      - [ ] Pressed
+    - [ ] Text
+      - [x] Enabled
+      - [ ] Disabled
+      - [x] Hovered
+      - [ ] Focused
+      - [ ] Pressed
+  - [ ] Floating Action Button (FAB)
+    - [x] Enabled
+    - [x] Hovered
+    - [ ] Focused
+    - [ ] Pressed
+  - [ ] Extended FAB
+    - [ ] Enabled
+    - [ ] Hovered
+    - [ ] Focused
+    - [ ] Pressed
+  - [ ] Icon
+    - [ ] Enabled
+    - [ ] Disabled
+    - [ ] Hovered
+    - [ ] Focused
+    - [ ] Pressed
+  - [ ] Segmented
+    - [ ] Enabled
+    - [ ] Disabled
+    - [ ] Hovered
+    - [ ] Focused
+    - [ ] Pressed
+- [ ] Cards
+  - [ ] Elevated
+    - [x] Headline
+    - [x] Subhead
+    - [x] Text
+    - [x] Action row
+    - [x] Enabled
+    - [ ] Disabled
+    - [x] Hovered
+    - [ ] Focused
+    - [ ] Pressed
+    - [ ] Dragged
+  - [ ] Filled
+    - [x] Headline
+    - [x] Subhead
+    - [x] Text
+    - [x] Action row
+    - [x] Enabled
+    - [ ] Disabled
+    - [x] Hovered
+    - [ ] Focused
+    - [ ] Pressed
+    - [ ] Dragged
+  - [ ] Outlined
+    - [x] Headline
+    - [x] Subhead
+    - [x] Text
+    - [x] Action row
+    - [x] Enabled
+    - [ ] Disabled
+    - [x] Hovered
+    - [ ] Focused
+    - [ ] Pressed
+    - [ ] Dragged
+- [ ] Checkbox
+  - [ ] Enabled
+  - [ ] Disabled
+  - [ ] Hovered
+  - [ ] Focused
+  - [ ] Pressed
+- [ ] Chips (not planned)
+- [ ] Date Pickers (not planned)
+- [ ] Dialogs (not planned)
+- [x] Divider
+- [ ] Lists (not planned)
+- [ ] Menus (not planned)
+- [ ] Navigation Bar
+  - [ ] Enabled
+  - [ ] Hovered
+  - [ ] Focused
+  - [ ] Pressed
+- [ ] Navigation Drawer
+  - [ ] Standard
+    - [x] Section headers
+    - [x] Section dividers
+    - [x] Enabled
+    - [x] Hovered
+    - [ ] Focused
+    - [ ] Pressed
+  - [ ] Modal
+    - [x] Section headers
+    - [x] Section dividers
+    - [x] Enabled
+    - [x] Hovered
+    - [ ] Focused
+    - [ ] Pressed
+- [ ] Navigation Rail
+  - [ ] FAB
+  - [x] Enabled
+  - [x] Hovered
+  - [ ] Focused
+  - [ ] Pressed
+- [ ] Progress Indicator (not planned)
+- [ ] Radio Button (not planned)
+- [ ] Search (not planned)
+- [ ] Sliders (not planned)
+- [ ] Snackbar (not planned)
+- [ ] Switch (not planned)
+- [ ] Tabs (not planned)
+- [ ] Text Field (not planned)
+- [ ] Time Picker (not planned)
+- [ ] Top App Bar (not planned)

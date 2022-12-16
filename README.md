@@ -11,6 +11,7 @@ My GitHub Pages site (WIP).
   - [x] Material 3 common buttons components (for cards)
   - [x] Material 3 FAB (floating action button)
   - [x] ~~RSS~~ Atom feed for blog
+  - [ ] Disabled state for next/previous blog post cards
 - [ ] Projects
   - [x] Main projects page
   - [ ] Pages for each of my projects
@@ -52,6 +53,7 @@ My GitHub Pages site (WIP).
     - [ ] Decrease margin size
     - [ ] Reduce the number of gallery items (eg 1 or 2 per row instead of 3)
 - [ ] Material 3 Jekyll theme
+  - [ ] Finish Material 3 components (see [components.md](components.md))
   - [ ] Make a custom Jekyll theme with Material 3 components
   - [ ] Move Jekyll theme to a different repo
   - [ ] Make this site use that theme

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Bevy Adventure
 github: bevy_adventure
 image: code.jpg

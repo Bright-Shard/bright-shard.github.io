@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html title="Projects" %}
+        <link href="/assets/post.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="navigation">
+            {% include navigation.html %}
+        </div>
+
+        <div id="titlebar">
+            {% include titlebar.html title="Projects" %}
+        </div>
+        
+        <div id="content">
+            <div id="blog-content">
+                <h1 id="title">{{ page.title }}</h1>
+                {{ content }}
+            </div>
+
+            <div id="toc-wrapper" class="card-filled">
+                <h1>About this project...</h1>
+                {% include toc.html html=content id='toc' %}
+                <div class="actions">
+                    <a class="button-outlined" href="/blog/">View All Posts</a>
+                </div>
+            </div>
+
+            <a class="fab" href="#titlebar">
+                <i class="fa-solid fa-angles-up"></i>
+            </a>
+        </div>
+    </body>
+</html>

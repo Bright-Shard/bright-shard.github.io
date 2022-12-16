@@ -2,24 +2,24 @@
     position: absolute;
     z-index: -2;
 
-    font-weight: var(--body-font);
-    color: var(--on-surface);
-    padding-right: var(--margin);
-    padding-bottom: var(--margin);
+    font-weight: $body-font;
+    color: $on-surface;
+    padding-right: $margin;
+    padding-bottom: $margin;
     width: 100%;
 
     > h1 {
-        font-size: var(--display-medium);
-        font-weight: var(--display-font);
+        font-size: $display-medium;
+        font-weight: $display-font;
         margin: 0;
-        margin-bottom: var(--margin);
+        margin-bottom: $margin;
     }
 
     > h2 {
-        font-size: var(--display-small);
-        font-weight: var(--display-font);
+        font-size: $display-small;
+        font-weight: $display-font;
         margin: 0;
-        margin-bottom: calc(var(--margin) / 2);
+        margin-bottom: calc($margin / 2);
     }
 
     > p {

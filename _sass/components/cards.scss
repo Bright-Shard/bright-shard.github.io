@@ -33,20 +33,20 @@
     }
     // Headline
     & > h1 {
-        font-weight: var(--display-font);
-        font-size: var(--display-small);
+        font-weight: $display-font;
+        font-size: $display-small;
         margin: 0px;
     }
     // Subhead
     & > h2 {
-        font-weight: var(--title-font);
-        font-size: var(--title-medium);
+        font-weight: $title-font;
+        font-size: $title-medium;
         margin: 0px;
     }
     // Text
     & > p {
-        font-weight: var(--body-font);
-        font-size: var(--body-medium);
+        font-weight: $body-font;
+        font-size: $body-medium;
         line-height: 1.5;
         margin: 0px;
     }
@@ -64,21 +64,21 @@
 
 // Elevated card
 .card-elevated {
-    background-color: var(--surface-1);
-    box-shadow: var(--shadow);
+    background-color: $surface-1;
+    box-shadow: $shadow;
 }
 
 // Filled card
 .card-filled {
-    background-color: var(--surface-1);
+    background-color: $surface-1;
 }
 
 // Outlined card
 .card-outlined {
-    background-color: var(--surface);
+    background-color: $surface;
     
     border-style: solid;
     border-width: 1px;
     border-radius: 12px;
-    border-color: var(--outline);
+    border-color: $outline;
 }

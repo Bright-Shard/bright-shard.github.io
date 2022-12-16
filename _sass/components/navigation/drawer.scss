@@ -3,6 +3,7 @@
     --width: 360px;
     --item-gap: 16px;
     --item-height: 56px;
+    --margin: 12px;
 
     display: flex;
     flex-direction: column;
@@ -13,16 +14,14 @@
 
     // Nav drawer labels
     > h1 {
-        color: var(--on-surface-variant);
-        font-weight: var(--title-font);
-        font-size: var(--title-small);
+        color: $on-surface-variant;
+        font-weight: $title-font;
+        font-size: $title-small;
         margin: 0px 28px;
     }
 
     // Each nav drawer item/link
     > a {
-        --margin: 12px;
-
         height: var(--item-height);
         width: calc(var(--width) - calc(var(--margin) * 2));
         padding-left: 16px;
@@ -35,9 +34,9 @@
         align-items: center;
         column-gap: var(--margin);
 
-        color: var(--on-surface-variant);
-        font-weight: var(--label-font);
-        font-size: var(--label-large);
+        color: $on-surface-variant;
+        font-weight: $label-font;
+        font-size: $label-large;
         text-decoration: none;
 
         > i {
@@ -45,20 +44,20 @@
         }
 
         // State layer
-        @include state_layer(var(--on-surface-variant), 28px);
+        @include state_layer($on-surface-variant, 28px);
     }
 
 
 
     // Active page is a lil funky
     > #active-page {
-        color: var(--on-secondary-container) !important;
-        background-color: var(--secondary-container) !important;
+        color: $on-secondary-container !important;
+        background-color: $secondary-container !important;
         @include round(28px);
 
         // State layer
         &::after {
-            background-color: var(--on-secondary-container) !important;
+            background-color: $on-secondary-container !important;
         }
     }
 }
@@ -66,10 +65,10 @@
 // Colour and border for the standard nav drawer
 //  is different from the modal drawer
 .navigation-drawer {
-    background-color: var(--surface);
+    background-color: $surface;
 }
 .navigation-drawer-modal {
-    background-color: var(--surface-2);
+    background-color: $surface-2;
 
     border-style: solid;
     border-width: 0px;

@@ -14,8 +14,8 @@ icon: fa-folder
             <h1>{{ project.title }}</h1>
             <p>{% include desc.html content=project.content %}</p>
             <div class="actions">
-                <a {% include link.html %} href="https://github.com/bright-shard/{{ project.github }}" class="button-text">View Source Code</a>
-                <a href="{{ project.url }}" class="button-outlined">More Information</a>
+                <a {% include link.html %} href="https://github.com/bright-shard/{{ project.github }}" class="button-text">View on GitHub</a>
+                <a href="{{ project.url }}" class="button-outlined">Learn More</a>
             </div>
         </div>
     {% endfor %}

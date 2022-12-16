@@ -15,8 +15,8 @@
     @include round(20px);
 
     // Button text
-    font-weight: var(--label-font);
-    font-size: var(--label-large);
+    font-weight: $label-font;
+    font-size: $label-large;
     text-decoration: none;
 
     // Button icon
@@ -26,47 +26,63 @@
     }
 }
 
+// ========== ELEVATED BUTTON ==========
+// Enabled state
 .button-elevated {
-    background-color: var(--surface-1);
-    box-shadow: var(--shadow);
-    color: var(--primary);
-    @include state_layer(var(--primary), 20px);
+    background-color: $surface-1;
+    box-shadow: $shadow;
+    color: $primary;
+    @include state_layer($primary, 20px);
+}
+// Disabled state
+.button-elevated[disabled] {
+    // Background colour is 12% opacity, while foreground is 38%
+    // Need to use rgba to set differing opacities
 
-    // The elevated button's elevation changes on hover
-    &:hover {
-        background-color: var(--surface-2);
-    }
+    // Get rgb of --on-surface from red(), green(), blue() functions
+    $colour: rgb(red($on-surface), green($on-surface), blue($on-surface));
+
+    // Background colour, w/ 12% opacity
+    background-color: rgba($colour, .12);
+    // Foreground colour, w/ 38% opacity
+    color: rgba($colour, .38);
+    box-shadow: none;
+
+}
+// Hover state
+.button-elevated:not([disabled]) {
+    background-color: $surface-2;
 }
 
 .button-filled {
-    background-color: var(--primary);
-    color: var(--on-primary);
-    @include state_layer(var(--on-primary), 20px);
+    background-color: $primary;
+    color: $on-primary;
+    @include state_layer($on-primary, 20px);
 }
 
 .button-tonal {
-    background-color: var(--secondary-container);
-    color: var(--on-secondary-container);
+    background-color: $secondary-container;
+    color: $on-secondary-container;
     transition-duration: .4s;
-    @include state_layer(var(--on-secondary-container), 20px);
+    @include state_layer($on-secondary-container, 20px);
 
     // The tonal buttons' elevation changes on hover
     &:hover {
-        box-shadow: var(--shadow);
+        box-shadow: $shadow;
     }
 }
 
 .button-outlined {
     border-style: solid;
     border-width: 1px;
-    border-color: var(--outline);
+    border-color: $outline;
     border-radius: 20px;
 
-    color: var(--primary);
-    @include state_layer(var(--primary), 20px);
+    color: $primary;
+    @include state_layer($primary, 20px);
 }
 
 .button-text {
-    color: var(--primary);
-    @include state_layer(var(--primary), 20px);
+    color: $primary;
+    @include state_layer($primary, 20px);
 }

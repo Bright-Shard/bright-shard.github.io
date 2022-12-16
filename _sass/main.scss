@@ -1,3 +1,61 @@
+// VARIABLES
+// They're in a different file because HOLY CRAP THERE'S SO MANY
+@import "variables";
+
+
+
+// FONTS
+// "it's all roboto. always has been."
+// Just Roboto at different weights.
+// Font from Google Fonts btw
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+    font-weight: 900;
+}
+
+
+
 // UNIVERSAL STYLES
 * {
     box-sizing: border-box;
@@ -5,13 +63,13 @@
 }
 a {
     text-decoration: underline;
-    color: var(--primary);
+    color: $primary;
 }
 p {
     line-height: 1.5;
 }
 body {
-    background-color: var(--surface);
+    background-color: $surface;
     margin: 0px;
 
     position: absolute;
@@ -21,10 +79,10 @@ body {
     width: 100%;
     
     display: grid;
-    grid-template-columns: var(--navigation-width) 1fr;
+    grid-template-columns: $navigation-width 1fr;
     grid-template-rows: 100px 1fr;
-    grid-column-gap: var(--margin);
-    grid-row-gap: var(--margin);
+    grid-column-gap: $margin;
+    grid-row-gap: $margin;
 }
 
 #navigation {
@@ -46,10 +104,6 @@ body {
 }
 
 
-
-// VARIABLES
-// They're in a different file because HOLY CRAP THERE'S SO MANY
-@import "variables";
 
 // M3 COMPONENTS
 // Navigation components

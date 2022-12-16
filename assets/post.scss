@@ -2,6 +2,7 @@
 ---
 
 @import "main";
+@import "variables";
 
 // Blog stuffs
 #content {
@@ -14,60 +15,60 @@
     max-width: 500px;
 
     > #title {
-        font-size: var(--display-large);
-        font-weight: var(--display-font);
+        font-size: $display-large;
+        font-weight: $display-font;
         margin-top: 0px;
         margin-bottom: 10px;
     }
     
     > h1 {
-        font-size: var(--display-medium);
-        font-weight: var(--display-font);
+        font-size: $display-medium;
+        font-weight: $display-font;
         margin-top: 75px;
         margin-bottom: 10px;
     }
 
     > h2 {
-        font-size: var(--display-small);
-        font-weight: var(--display-font);
+        font-size: $display-small;
+        font-weight: $display-font;
         margin-top: 30px;
         margin-bottom: 5px;
     }
 
     > h3 {
-        font-size: var(--headline-large);
-        font-weight: var(--headline-font);
+        font-size: $headline-large;
+        font-weight: $headline-font;
         margin-top: 15px;
         margin-bottom: 5px;
     }
 
     > p {
-        font-size: var(--body-large);
-        font-weight: var(--body-font);
+        font-size: $body-large;
+        font-weight: $body-font;
     }
 
     li {
-        font-size: var(--body-large);
-        font-weight: var(--body-font);
+        font-size: $body-large;
+        font-weight: $body-font;
     }
 
     a {
-        color: var(--primary);
+        color: $primary;
         text-decoration: underline;
     }
 }
 #reading-menu {
     --columns: 2;
     
-    margin-top: var(--margin);
+    margin-top: $margin;
 
     grid-column: 1 / span 2;
 }
 #toc-wrapper {
     height: min-content;
     position: sticky;
-    right: var(--margin);
-    top: var(--margin);
+    right: $margin;
+    top: $margin;
 
     ul {
         padding: 5px 16px;
@@ -75,11 +76,11 @@
     }
     a {
         text-decoration: none;
-        color: var(--on-surface);
+        color: $on-surface;
         transition-duration: .4s;
     }
     a:hover {
-        color: var(--primary);
+        color: $primary;
     }
 }
 #toc {

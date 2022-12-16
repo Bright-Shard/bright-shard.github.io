@@ -4,7 +4,7 @@
     height: 100%;
     width: 80px;
 
-    background-color: var(--surface-2);
+    background-color: $surface-2;
 
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
         position: absolute;
         top: 0;
         display: block;
-        background-color: var(--surface-2);
+        background-color: $surface-2;
         height: 100%;
         width: 80px;
         z-index: -1;
@@ -42,41 +42,41 @@
 
         // The labels for nav items in the navigation rail
         > p {
-            color: var(--on-surface-variant);
-            font-weight: var(--label-font);
-            font-size: var(--label-medium);
+            color: $on-surface-variant;
+            font-weight: $label-font;
+            font-size: $label-medium;
             margin: 0px;
         }
         // The icons for nav items in the navigation rail
         > i {
             padding-top: 4px;
             font-size: 24px;
-            color: var(--on-surface-variant);
+            color: $on-surface-variant;
             width: 56px;
             height: 32px;
 
-            @include state_layer(var(--on-surface-variant), 16px);
+            @include state_layer($on-surface-variant, 16px);
         }
 
         // Hover animation
         &:hover > i::after {
-            opacity: var(--state-layer-opacity-hover);
+            opacity: $state-layer-opacity-hover;
         }
     }
 
     // The active page gets fancy stylings
     > #active-page {
         > p {
-            color: var(--on-surface) !important;
+            color: $on-surface !important;
         }
         > i {
-            color: var(--on-secondary-container) !important;
-            background-color: var(--secondary-container) !important;
+            color: $on-secondary-container !important;
+            background-color: $secondary-container !important;
             @include round(16px);
 
             // State layer
             &::after {
-                background-color: var(--on-surface) !important;
+                background-color: $on-surface !important;
             }
         }
     }
@@ -98,7 +98,7 @@
     border-style: solid;
     border-width: 0px;
     border-left-width: 1px;
-    border-color: var(--outline-variant);
+    border-color: $outline-variant;
 }
 
 // Slideout animation for subpages
@@ -108,7 +108,7 @@
 
 // Colour active subpage
 #active-subpage {
-    color: var(--on-secondary-container) !important;
-    background-color: var(--secondary-container) !important;
+    color: $on-secondary-container !important;
+    background-color: $secondary-container !important;
     @include round(28px);
 }

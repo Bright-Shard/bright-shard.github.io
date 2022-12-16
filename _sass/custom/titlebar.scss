@@ -1,7 +1,7 @@
 // Basic styling for the title, subtitle, and social icons
 #titlebar {
-    font-size: var(--display-large);
-    color: var(--primary);
+    font-size: $display-large;
+    color: $primary;
     font-weight: 700;
 
     display: flex;
@@ -12,7 +12,7 @@
     position: absolute;
     z-index: -2;
     padding: 0px;
-    padding-right: var(--margin);
+    padding-right: $margin;
 
     a {
         color: inherit;

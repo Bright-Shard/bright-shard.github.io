@@ -43,10 +43,12 @@ $on-error-container: #f9dedc;
 
 
 // State layer opacities
-$state-layer-opacity-hover: 8%;
-$state-layer-opacity-focus: 12%;
-$state-layer-opacity-press: 12%;
-$state-layer-opacity-drag: 16%;
+$state-disabled-bg: 12%;
+$state-disabled-fg: 38%;
+$state-hovered: 8%;
+$state-focused: 12%;
+$state-pressed: 12%;
+$state-dragged: 16%;
 
 
 
@@ -89,11 +91,15 @@ $shadow: 0px 0px 5px 1px #000000;
 
 
 
-// MIXINS
+// ========== MIXINS & FUNCTIONS ==========
 // Round corners without showing the border
 @mixin round($radius) {
     border: 0px solid;
     border-radius: $radius;
+}
+// Convert hex codes into an RGB value
+@function hex2rgb($colour) {
+    @return rgb(red($colour), green($colour), blue($colour));
 }
 // Build a state layer for an element
 @mixin state_layer($colour, $radius, $override-position: true) {
@@ -120,8 +126,38 @@ $shadow: 0px 0px 5px 1px #000000;
 
         @include round($radius);
     }
+}
+// Disabled state for components
+@mixin disabled_state($fg-opacity: $state-disabled-fg, $bg-opacity: $state-disabled-bg, $colour: $on-surface) {
+    &[disabled] {
+        // Background colour is 12% opacity, while foreground is 38%
+        // Need to use rgba to set differing opacities
+        // Get RGB from on-surface
+        $colour: hex2rgb($on-surface);
 
+        // Background colour, w/ opacity
+        background-color: rgba($colour, $bg-opacity);
+        // Foreground colour, w/ opacity
+        color: rgba($colour, $fg-opacity);
+        // Remove the shadow, for elements that have it
+        box-shadow: none;
+    }
+}
+// Hovered state for components
+@mixin hovered_state($opacity: $state-hovered) {
     &:not([disabled]):hover::after {
-        opacity: $state-layer-opacity-hover;
+        opacity: $opacity;
+    }
+}
+// Focused state for components
+@mixin focused_state($opacity: $state-focused) {
+    &:not([disabled]):focus::after {
+        opacity: $opacity;
+    }
+}
+// Pressed state for components
+@mixin pressed_state($opacity: $state-pressed) {
+    &:not([disabled]):active::after {
+        opacity: $opacity;
     }
 }

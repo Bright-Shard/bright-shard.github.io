@@ -6,37 +6,37 @@ All of the currently implemented Material 3 components, and what needs to be imp
 - [ ] Bottom App Bar (not planned)
 - [ ] Bottom Sheets (not planned)
 - [ ] Buttons
-  - [ ] Common
-    - [ ] Elevated
+  - [x] Common
+    - [x] Elevated
       - [x] Enabled
-      - [ ] Disabled
+      - [x] Disabled
       - [x] Hovered
-      - [ ] Focused
-      - [ ] Pressed
-    - [ ] Filled
+      - [x] Focused
+      - [x] Pressed
+    - [x] Filled
       - [x] Enabled
-      - [ ] Disabled
+      - [x] Disabled
       - [x] Hovered
-      - [ ] Focused
-      - [ ] Pressed
-    - [ ] Tonal
+      - [x] Focused
+      - [x] Pressed
+    - [x] Tonal
       - [x] Enabled
-      - [ ] Disabled
+      - [x] Disabled
       - [x] Hovered
-      - [ ] Focused
-      - [ ] Pressed
-    - [ ] Outlined
+      - [x] Focused
+      - [x] Pressed
+    - [x] Outlined
       - [x] Enabled
-      - [ ] Disabled
+      - [x] Disabled
       - [x] Hovered
-      - [ ] Focused
-      - [ ] Pressed
-    - [ ] Text
+      - [x] Focused
+      - [x] Pressed
+    - [x] Text
       - [x] Enabled
-      - [ ] Disabled
+      - [x] Disabled
       - [x] Hovered
-      - [ ] Focused
-      - [ ] Pressed
+      - [x] Focused
+      - [x] Pressed
   - [ ] Floating Action Button (FAB)
     - [x] Enabled
     - [x] Hovered

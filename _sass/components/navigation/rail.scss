@@ -60,7 +60,7 @@
 
         // Hover animation
         &:hover > i::after {
-            opacity: $state-layer-opacity-hover;
+            opacity: $state-hovered;
         }
     }
 

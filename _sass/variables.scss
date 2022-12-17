@@ -87,7 +87,8 @@ $body-font: 400;
 // This isn't Material 3, it's just here for conveniance
 $margin: 32px;
 $navigation-width: 80px;
-$shadow: 0px 0px 5px 1px #000000;
+$shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.3);
+$shadow-1: 0px 4px 4px 2px rgba(0, 0, 0, 0.3);
 
 
 
@@ -144,9 +145,15 @@ $shadow: 0px 0px 5px 1px #000000;
     }
 }
 // Hovered state for components
-@mixin hovered_state($opacity: $state-hovered) {
-    &:not([disabled]):hover::after {
-        opacity: $opacity;
+@mixin hovered_state($opacity: $state-hovered, $hover-shadow: false) {
+    &:not([disabled]):hover{
+        @if $hover-shadow != false {
+            box-shadow: $hover-shadow;
+        }
+
+        &::after {
+            opacity: $opacity;
+        }
     }
 }
 // Focused state for components
@@ -159,5 +166,19 @@ $shadow: 0px 0px 5px 1px #000000;
 @mixin pressed_state($opacity: $state-pressed) {
     &:not([disabled]):active::after {
         opacity: $opacity;
+    }
+}
+// Fancy pressed state animation
+@keyframes pressed {
+    from {width: 0;}
+    to {width: 100%;}
+}
+// Mixin to play the fancy pressed state animation
+@mixin fancy_pressed_state() {
+    &:not([disabled]):active::after {
+        opacity: $state-pressed;
+        animation-name: pressed;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
     }
 }

@@ -52,9 +52,8 @@
     }
     // Action row
     & > .actions {
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
-        align-self: flex-end;
         align-items: center;
         justify-content: flex-end;
         column-gap: 8px;
@@ -66,11 +65,32 @@
 .card-elevated {
     background-color: $surface-1;
     box-shadow: $shadow;
+
+    // State layer
+    @include state_layer($on-surface, 12px);
+
+    // Disabled state
+    @include disabled_state();
+    // Hover state
+    @include hovered_state($state-hovered, $shadow-1);
+
 }
 
 // Filled card
 .card-filled {
     background-color: $surface-1;
+
+    // State layer
+    @include state_layer($on-surface, 12px);
+
+    // Disabled state
+    @include disabled_state();
+    
+    // Hover state
+    @include hovered_state();
+    &:not([disabled]):hover {
+        box-shadow: $shadow;
+    }
 }
 
 // Outlined card

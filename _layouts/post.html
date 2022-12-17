@@ -39,6 +39,15 @@
                             <a class="button-outlined" href="{{ previous.url }}">Read Post</a>
                         </div>
                     </div>
+                {% else %}
+                    <div class="card-filled" disabled>
+                        <h1>Previous Post</h1>
+                        <p>No post found. :(</p>
+                        <div class="actions">
+                            <a class="button-text" disabled>All Posts</a>
+                            <a class="button-outlined" disabled>Read Post</a>
+                        </div>
+                    </div>
                 {% endif %}
 
                 {% assign next = page.next %}
@@ -50,6 +59,15 @@
                         <div class="actions">
                             <a class="button-text" href="/blog/">All Posts</a>
                             <a class="button-outlined" href="{{ next.url }}">Read Post</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="card-filled" disabled>
+                        <h1>Next Post</h1>
+                        <p>No post found. :(</p>
+                        <div class="actions">
+                            <a class="button-text" disabled>All Posts</a>
+                            <a class="button-outlined" disabled>Read Post</a>
                         </div>
                     </div>
                 {% endif %}

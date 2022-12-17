@@ -100,7 +100,9 @@ All of the currently implemented Material 3 components, and what needs to be imp
     - [x] Action row
     - [x] Enabled
     - [ ] Disabled
-    - [ ] Hovered
+      - [x] Disable self
+      - [ ] Disable child components
+    - [x] Hovered
     - [ ] Focused
     - [ ] Pressed
     - [ ] Dragged
@@ -111,7 +113,9 @@ All of the currently implemented Material 3 components, and what needs to be imp
     - [x] Action row
     - [x] Enabled
     - [ ] Disabled
-    - [ ] Hovered
+      - [x] Disable self
+      - [ ] Disable child components
+    - [x] Hovered
     - [ ] Focused
     - [ ] Pressed
     - [ ] Dragged
@@ -122,6 +126,8 @@ All of the currently implemented Material 3 components, and what needs to be imp
     - [x] Action row
     - [x] Enabled
     - [ ] Disabled
+      - [ ] Disable self
+      - [ ] Disable child components
     - [ ] Hovered
     - [ ] Focused
     - [ ] Pressed
@@ -143,27 +149,27 @@ All of the currently implemented Material 3 components, and what needs to be imp
   - [ ] Hovered
   - [ ] Focused
   - [ ] Pressed
-- [ ] Navigation Drawer
-  - [ ] Standard
+- [x] Navigation Drawer
+  - [x] Standard
     - [x] Section headers
     - [x] Section dividers
     - [x] Enabled
     - [x] Hovered
     - [x] Focused
-    - [ ] Pressed
-  - [ ] Modal
+    - [x] Pressed
+  - [x] Modal
     - [x] Section headers
     - [x] Section dividers
     - [x] Enabled
     - [x] Hovered
     - [x] Focused
-    - [ ] Pressed
-- [ ] Navigation Rail
+    - [x] Pressed
+- [x] Navigation Rail
   - [x] FAB
   - [x] Enabled
   - [x] Hovered
   - [x] Focused
-  - [ ] Pressed
+  - [x] Pressed
 - [ ] Progress Indicator (not planned)
 - [ ] Radio Button (not planned)
 - [ ] Search (not planned)

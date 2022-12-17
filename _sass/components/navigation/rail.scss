@@ -81,6 +81,11 @@
             opacity: $state-focused;
         }
         // Pressed state
+        &:active > i::after {
+            animation-name: pressed;
+            animation-duration: .4s;
+            animation-fill-mode: forwards;
+        }
     }
 
     // The active page gets fancy stylings

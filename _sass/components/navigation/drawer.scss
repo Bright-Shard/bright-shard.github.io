@@ -58,6 +58,14 @@
         &:focus {
             color: $on-surface;
         }
+        // Pressed state
+        @include fancy_pressed_state();
+        &:active {
+            color: $on-surface;
+            &::after {
+                background-color: $on-secondary-container;
+            }
+        }
     }
 
 

@@ -24,13 +24,20 @@
         width: 80px;
         z-index: -1;
     }
-}
 
-// Each nav item in the navigation rail
-.navigation-page {
-    width: 80px;
+    // Hamburger menu
+    > .hamburger {
+        margin-bottom: 16px;
+    }
+    // FAB
+    > .fab {
+        margin-bottom: 70px;
+    }
 
+    // Actual navigation pages
     a {
+        width: 80px;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -58,10 +65,22 @@
             @include state_layer($on-surface-variant, 16px);
         }
 
-        // Hover animation
-        &:hover > i::after {
-            opacity: $state-hovered;
+        &:hover {
+            // Hovered state
+            > i::after {
+                opacity: $state-hovered;
+            }
+
+            // Expand subpages, if they exist
+            + .subpages {
+                left: 80px;
+            }
         }
+        // Focused state
+        &:focus > i::after {
+            opacity: $state-focused;
+        }
+        // Pressed state
     }
 
     // The active page gets fancy stylings
@@ -83,10 +102,10 @@
 }
 
 // The subpages for a navigation rail item
-.contains-subpages > div {
-    --width: 200px;
-    --item-gap: 5px;
-    --item-height: 45px;
+.subpages {
+    --width: 200px !important;
+    --item-gap: 5px !important;
+    --item-height: 45px !important;
 
     z-index: -2;
     position: absolute;
@@ -95,15 +114,15 @@
 
     transition-duration: .4s;
 
-    border-style: solid;
-    border-width: 0px;
-    border-left-width: 1px;
-    border-color: $outline-variant;
-}
+    border-style: solid !important;
+    border-width: 0px !important;
+    border-left-width: 1px !important;
+    border-color: $outline-variant !important;
 
-// Slideout animation for subpages
-.contains-subpages:hover > div {
-    left: 80px;
+    // When they're hovered over, keep them expanded
+    &:hover {
+        left: 80px;
+    }
 }
 
 // Colour active subpage

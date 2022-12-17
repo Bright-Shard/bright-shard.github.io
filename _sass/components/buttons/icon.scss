@@ -1,15 +1,17 @@
-.button-icon, .button-icon-enabled, .button-icon-disabled {
+// ========== STANDARD ICON BUTTON ==========
+.button-icon {
+    // Enabled state
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 48px;
     height: 48px;
-
     color: $on-surface-variant;
-    @include state_layer($on-surface-variant, 30px);
 
+    // State layer
+    @include state_layer($on-surface-variant, 30px);
+    // State layer has a specific size and position for icon buttons
     &::after {
         width: 40px;
         height: 40px;
@@ -42,9 +44,17 @@
         @include round(5px);
     }
 
-    // Show tooltip on hover
+    // Disabled state
+    @include disabled_state();
+    // Hovered state
+    @include hovered_state();
+    // Tooltip hover state
     &:hover > p {
         opacity: 1;
         padding: 1px 7px;
     }
+    // Focused state
+    @include focused_state();
+    // Pressed state
+    @include pressed_state();
 }

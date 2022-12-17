@@ -22,6 +22,7 @@
 
     // Each nav drawer item/link
     > a {
+        // Enabled state
         height: var(--item-height);
         width: calc(var(--width) - calc(var(--margin) * 2));
         padding-left: 16px;
@@ -44,7 +45,19 @@
         }
 
         // State layer
-        @include state_layer($on-surface-variant, 28px);
+        @include state_layer($on-surface, 28px);
+        // Hovered state
+        @include hovered_state();
+        // Text colour changes on hover as well, for some reason
+        &:hover {
+            color: $on-surface;
+        }
+        // Focused state
+        @include focused_state();
+        // Text colour changes on focus as well, for some reason
+        &:focus {
+            color: $on-surface;
+        }
     }
 
 

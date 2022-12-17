@@ -48,12 +48,25 @@ All of the currently implemented Material 3 components, and what needs to be imp
     - [ ] Focused
     - [ ] Pressed
   - [ ] Icon
-    - [ ] Standard
-      - [ ] Enabled
-      - [ ] Disabled
-      - [ ] Hovered
-      - [ ] Focused
-      - [ ] Pressed
+    - [x] Standard
+      - [x] Enabled
+      - [x] Disabled
+      - [x] Hovered
+      - [x] Focused
+      - [x] Pressed
+    - [ ] Toggleable
+      - [ ] Toggled On
+        - [ ] Enabled
+        - [ ] Disabled
+        - [ ] Hovered
+        - [ ] Focused
+        - [ ] Pressed
+      - [ ] Toggled Off
+        - [ ] Enabled
+        - [ ] Disabled
+        - [ ] Hovered
+        - [ ] Focused
+        - [ ] Pressed
     - [ ] Contained
       - [ ] Filled
         - [ ] Enabled
@@ -136,20 +149,20 @@ All of the currently implemented Material 3 components, and what needs to be imp
     - [x] Section dividers
     - [x] Enabled
     - [x] Hovered
-    - [ ] Focused
+    - [x] Focused
     - [ ] Pressed
   - [ ] Modal
     - [x] Section headers
     - [x] Section dividers
     - [x] Enabled
     - [x] Hovered
-    - [ ] Focused
+    - [x] Focused
     - [ ] Pressed
 - [ ] Navigation Rail
-  - [ ] FAB
+  - [x] FAB
   - [x] Enabled
   - [x] Hovered
-  - [ ] Focused
+  - [x] Focused
   - [ ] Pressed
 - [ ] Progress Indicator (not planned)
 - [ ] Radio Button (not planned)

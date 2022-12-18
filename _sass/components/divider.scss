@@ -2,8 +2,8 @@
     --margin: 28px;
     
     height: 0px;
-    width: calc($width - calc($margin * 2));
-    margin: $margin;
+    width: calc($width - calc(var(--margin) * 2));
+    margin: var(--margin);
     border-style: solid;
     border-width: 0px;
     border-top-width: 1px;

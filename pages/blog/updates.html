@@ -1,0 +1,11 @@
+---
+layout: default
+permalink: /blog/updates
+title: Project Updates
+parent: blog.html
+order: 1
+---
+
+<h1>Blog Posts: Project Updates</h1>
+{% assign posts = site.posts | where: "category", "updates" %}
+{% include blog-layout.html posts=posts %}

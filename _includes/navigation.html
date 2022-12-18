@@ -30,14 +30,18 @@
             </a>
 
             {% for subpage in subpages %}
-                {% assign id = "" %}
-                {% if page.name == subpage.name %}
-                    {% assign id = "active-subpage" %}
-                {% endif %}
+                {% if subpage.title == "page.content" %}
+                    {{ subpage.content }}
+                {% else %}
+                    {% assign id = "" %}
+                    {% if page.name == subpage.name %}
+                        {% assign id = "active-subpage" %}
+                    {% endif %}
 
-                <a href="{{ subpage.url }}" id="{{ id }}">
-                    {{ subpage.title }}
-                </a>
+                    <a href="{{ subpage.url }}" id="{{ id }}">
+                        {{ subpage.title }}
+                    </a>
+                {% endif %}
             {% endfor %}
         </div>
     {% endif %}

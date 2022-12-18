@@ -10,14 +10,19 @@
     row-gap: var(--item-gap);
     width: var(--width);
     height: 100%;
-    padding-top: 16px;
+    padding-top: var(--margin);
 
     // Nav drawer labels
     > h1 {
         color: $on-surface-variant;
         font-weight: $title-font;
         font-size: $title-small;
-        margin: 0px 28px;
+        margin: 0px var(--margin);
+        margin-bottom: var(--item-gap);
+    }
+    // Nav drawer dividers
+    > .divider {
+        --margin: inherit;
     }
 
     // Each nav drawer item/link

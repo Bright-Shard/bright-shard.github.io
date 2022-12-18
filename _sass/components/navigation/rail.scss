@@ -65,16 +65,12 @@
             @include state_layer($on-surface-variant, 16px);
         }
 
-        &:hover {
-            // Hovered state
-            > .icon::after {
-                opacity: $state-hovered;
-            }
+        // Hover state
+        @include hovered_state($state-hovered, false, icon);
 
-            // Expand subpages, if they exist
-            + .subpages {
-                left: 80px;
-            }
+        // Expand subpages, if they exist
+        &:hover + .subpages {
+            left: 80px;
         }
         // Focused state
         &:focus > .icon::after {

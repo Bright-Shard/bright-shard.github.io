@@ -9,22 +9,17 @@
     height: 48px;
     color: $on-surface-variant !important;
 
-    // State layer
-    @include state_layer($on-surface-variant, 30px);
-    // State layer has a specific size and position for icon buttons
-    &::after {
-        width: 40px;
-        height: 40px;
-        top: 4px;
-        left: 4px;
-    }
-
     // Icon
     > .icon {
         font-size: 24px;
-        width: 24px;
-        height: 24px;
-        display: inline-block;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // State layer
+        @include state_layer($on-surface-variant, 30px);
     }
 
     // Tooltip
@@ -47,14 +42,14 @@
     // Disabled state
     @include disabled_state();
     // Hovered state
-    @include hovered_state();
+    @include hovered_state($state-hovered, false, icon);
     // Tooltip hover state
     &:hover > p {
         opacity: 1;
         padding: 1px 7px;
     }
     // Focused state
-    @include focused_state();
+    @include focused_state($state-focused, icon);
     // Pressed state
-    @include pressed_state();
+    @include pressed_state($state-pressed, icon);
 }

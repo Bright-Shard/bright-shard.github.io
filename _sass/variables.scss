@@ -145,27 +145,50 @@ $shadow-1: 0px 4px 4px 2px rgba(0, 0, 0, 0.3);
     }
 }
 // Hovered state for components
-@mixin hovered_state($opacity: $state-hovered, $hover-shadow: false) {
+@mixin hovered_state($opacity: $state-hovered, $hover-shadow: false, $target: false) {
     &:not([disabled]):hover{
         @if $hover-shadow != false {
             box-shadow: $hover-shadow;
         }
 
-        &::after {
-            opacity: $opacity;
+        @if $target != false {
+            .#{$target}::after {
+                opacity: $opacity;
+            }
+        } @else {
+            &::after {
+                opacity: $opacity;
+            }
         }
     }
 }
 // Focused state for components
-@mixin focused_state($opacity: $state-focused) {
-    &:not([disabled]):focus::after {
-        opacity: $opacity;
+@mixin focused_state($opacity: $state-focused, $target: false) {
+    &:not([disabled]):focus {
+        @if $target != false {
+            .#{$target}::after {
+                opacity: $opacity;
+            }
+        } @else {
+            &::after {
+                opacity: $opacity;
+            }
+        }
     }
 }
 // Pressed state for components
-@mixin pressed_state($opacity: $state-pressed) {
-    &:not([disabled]):active::after {
-        opacity: $opacity;
+@mixin pressed_state($opacity: $state-pressed, $target: false) {
+
+    &:not([disabled]):active {
+        @if $target != false {
+            .#{$target}::after {
+                opacity: $opacity;
+            }
+        } @else {
+            &::after {
+                opacity: $opacity;
+            }
+        }
     }
 }
 // Fancy pressed state animation

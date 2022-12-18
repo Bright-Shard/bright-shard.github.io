@@ -8,14 +8,30 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     z-index: 0;
     position: fixed;
     bottom: 16px;
     right: 16px;
 
+    > .icon {
+        width: 24px;
+        height: 24px;
+    }
+
     @include round(16px);
+
+    // State layer
     @include state_layer($on-primary-container, 16px, false);
+
+    // Hovered state
+    @include hovered_state($state-hovered, $shadow-1);
+
+    // Focused state
+    @include focused_state();
+
+    // Fancy pressed state
+    @include fancy_pressed_state();
 }
 
 .fab {

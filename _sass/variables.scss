@@ -170,15 +170,15 @@ $shadow-1: 0px 4px 4px 2px rgba(0, 0, 0, 0.3);
 }
 // Fancy pressed state animation
 @keyframes pressed {
-    from {width: 0;}
-    to {width: 100%;}
+    from {width: 0px; height: 0px; left: 50%; top: 50%;}
+    to {width: 100%; height: 100%; left: 0px; top: 0;}
 }
 // Mixin to play the fancy pressed state animation
 @mixin fancy_pressed_state() {
     &:not([disabled]):active::after {
         opacity: $state-pressed;
         animation-name: pressed;
-        animation-duration: .4s;
+        animation-duration: .6s;
         animation-fill-mode: forwards;
     }
 }

@@ -35,7 +35,7 @@
     }
 
     // Actual navigation pages
-    a {
+    > a {
         width: 80px;
 
         display: flex;
@@ -55,8 +55,8 @@
             margin: 0px;
         }
         // The icons for nav items in the navigation rail
-        > i {
-            padding-top: 4px;
+        > .icon {
+            padding: 4px;
             font-size: 24px;
             color: $on-surface-variant;
             width: 56px;
@@ -67,7 +67,7 @@
 
         &:hover {
             // Hovered state
-            > i::after {
+            > .icon::after {
                 opacity: $state-hovered;
             }
 
@@ -77,11 +77,11 @@
             }
         }
         // Focused state
-        &:focus > i::after {
+        &:focus > .icon::after {
             opacity: $state-focused;
         }
         // Pressed state
-        &:active > i::after {
+        &:active > .icon::after {
             animation-name: pressed;
             animation-duration: .4s;
             animation-fill-mode: forwards;
@@ -93,7 +93,7 @@
         > p {
             color: $on-surface !important;
         }
-        > i {
+        > .icon {
             color: $on-secondary-container !important;
             background-color: $secondary-container !important;
             @include round(16px);

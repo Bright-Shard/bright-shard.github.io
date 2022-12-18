@@ -1,5 +1,5 @@
 # Components to-do list
-All of the currently implemented Material 3 components, and what needs to be implemented in the future. If a component isn't planned, I might never actually implement it, probably because I won't need it.
+All of the currently implemented Material 3 components, as well as planned Material 3 components, and their states. If a component isn't planned, I might never actually implement it, probably because I won't need it.
 [Back to README](README.md)
 
 - [ ] Badges (not planned)
@@ -179,4 +179,8 @@ All of the currently implemented Material 3 components, and what needs to be imp
 - [ ] Tabs (not planned)
 - [ ] Text Field (not planned)
 - [ ] Time Picker (not planned)
-- [ ] Top App Bar (not planned)
+- [ ] Top App Bar
+  - [ ] Center-aligned
+  - [ ] Small
+  - [ ] Medium
+  - [ ] Large

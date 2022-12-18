@@ -7,7 +7,7 @@
     align-items: center;
     width: 48px;
     height: 48px;
-    color: $on-surface-variant;
+    color: $on-surface-variant !important;
 
     // State layer
     @include state_layer($on-surface-variant, 30px);
@@ -20,7 +20,7 @@
     }
 
     // Icon
-    > i {
+    > .icon {
         font-size: 24px;
         width: 24px;
         height: 24px;

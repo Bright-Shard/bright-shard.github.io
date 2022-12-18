@@ -2,20 +2,20 @@
 {% assign navbarpages = site.pages | where: "navbar", "enabled" | sort: "order" %}
 {% for navbarpage in navbarpages %}
 
-    {% assign style = "fa-regular" %}
+    {% assign icon = navbarpage.icon %}
     {% assign id = "" %}
     {% assign subpages = site.pages | where: "parent", navbarpage.name | sort: "order" %}
 
     {% if page.name == navbarpage.name %}
-        {% assign style = "fa-solid" %}
+        {% assign icon = navbarpage.icon-active %}
         {% assign id = "active-page" %}
     {% elsif page.parent == navbarpage.name %}
-        {% assign style = "fa-solid" %}
+        {% assign icon = navbarpage.icon-active %}
         {% assign id = "active-page" %}
     {% endif %}
 
     <a id="{{ id }}" href="{{ navbarpage.url }}">
-        <i class="{{ navbarpage.icon }} {{ style }}"></i>
+        <i class="icon">{{ icon }}</i>
         <p>{{ navbarpage.title }}</p>
     </a>
     

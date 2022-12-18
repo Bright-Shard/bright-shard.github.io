@@ -11,7 +11,7 @@ My GitHub Pages site (WIP).
   - [x] Material 3 common buttons components (for cards)
   - [x] Material 3 FAB (floating action button)
   - [x] ~~RSS~~ Atom feed for blog
-  - [ ] Disabled state for next/previous blog post cards
+  - [x] Disabled state for next/previous blog post cards
 - [ ] Projects
   - [x] Main projects page
   - [ ] Pages for each of my projects

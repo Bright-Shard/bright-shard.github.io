@@ -1,3 +1,8 @@
+:root {
+    // Smooth scrolling, for table of contents/jumping around the page
+    scroll-behavior: smooth;
+}
+
 #content {
     position: absolute;
     z-index: -2;

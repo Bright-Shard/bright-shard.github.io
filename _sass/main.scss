@@ -59,7 +59,7 @@
 // UNIVERSAL STYLES
 * {
     box-sizing: border-box;
-    font-family: "Roboto";
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 a {
     text-decoration: underline;
@@ -83,6 +83,11 @@ body {
     grid-template-rows: 100px 1fr;
     grid-column-gap: $margin;
     grid-row-gap: $margin;
+}
+// Make sure SVG icons don't clip out of their space
+.icon > svg {
+    width: 24px;
+    height: 24px;
 }
 
 #navigation {

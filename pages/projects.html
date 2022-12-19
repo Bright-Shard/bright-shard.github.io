@@ -11,11 +11,13 @@ icon-active: <svg width="32" height="32" viewBox="0 0 512 512"><path fill="curre
 <div class="gallery-flex">
     {% for project in site.projects %}
         <div class="card-elevated">
-            <img class="banner" src="/assets/project-banners/{{ project.image }}">
+            {% if project.image %}
+                <img class="banner" src="/assets/project-banners/{{ project.image }}">
+            {% endif %}
             <h1>{{ project.title }}</h1>
             <p>{% include desc.html content=project.content %}</p>
             <div class="actions">
-                <a {% include link.html %} href="https://github.com/bright-shard/{{ project.github }}" class="button-text">View on GitHub</a>
+                <a {% include github.html repo=project.github %} class="button-text">View on GitHub</a>
                 <a href="{{ project.url }}" class="button-outlined">Learn More</a>
             </div>
         </div>

@@ -20,7 +20,7 @@ My GitHub Pages site (WIP).
       - [ ] Example code
       - [ ] Link to example game
     - [ ] HiddenHID
-      - [ ] Description
+      - [x] Description
       - [ ] Demo attack
     - [ ] Cookie Clicker++
       - [ ] Description

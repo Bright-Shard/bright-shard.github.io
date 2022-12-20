@@ -14,10 +14,7 @@
         </div>
         
         <div id="content">
-            <div id="blog-content">
-                <h1 id="title">{{ page.title }}</h1>
-                {{ content }}
-            </div>
+            <h1 id="title">{{ page.title }}</h1>
 
             <div id="toc-wrapper" class="card-filled">
                 <h1>About this project...</h1>
@@ -26,6 +23,10 @@
                     <a {% include github.html repo=page.github %} class="button-text">View on GitHub</a>
                     <a class="button-outlined" href="/projects/">All Projects</a>
                 </div>
+            </div>
+
+            <div id="blog-content">
+                {{ content }}
             </div>
 
             <a class="fab" href="#titlebar">

@@ -4,8 +4,31 @@
 @use "material/theme" as *;
 
 #content {
-    display: grid;
-    grid-template-columns: 1fr 350px;
+    @include not_small_screen {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+
+        > #title {
+            grid-column: 1;
+        }
+        > #blog-content {
+            grid-column: 1;
+        }
+        > #toc-wrapper {
+            grid-column: 1;
+        }
+        > #reading-menu {
+            grid-column: 1 / span 2;
+        }
+    }
+}
+#title {
+    font-size: $display-large !important;
+    font-weight: $display-font !important;
+    display: block !important;
+    margin: 0px !important;
+    margin-bottom: 10px !important;
+    text-align: center;
 }
 #blog-content {
     display: flex;
@@ -14,13 +37,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
-    > #title {
-        font-size: $display-large;
-        font-weight: $display-font;
-        margin-top: 0px;
-        margin-bottom: 10px;
-    }
     
     > h1 {
         font-size: $display-medium;
@@ -70,13 +86,25 @@
     
     margin-top: var(--margin);
 
-    grid-column: 1 / span 2;
+    > .card-filled {
+        width: 100%;
+        height: 100%;
+    }
 }
 #toc-wrapper {
     height: min-content;
-    position: sticky;
-    right: var(--margin);
-    top: var(--margin);
+
+    @include not_small_screen {
+        position: sticky;
+        right: var(--margin);
+        top: var(--margin);
+    }
+    @include small_screen {
+        width: 500px;
+        display: block;
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }
 
     ul {
         padding: 5px 16px;
@@ -99,8 +127,4 @@
     > li {
         margin-bottom: 7px;
     }
-}
-.card-filled {
-    width: 100%;
-    height: 100%;
 }

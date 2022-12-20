@@ -2,22 +2,23 @@
 // Material 3 theme variables
 @use "material/theme" as *;
 // Navigation components
-@use "components/navigation/bar";
-@use "components/navigation/rail";
-@use "components/navigation/drawer";
+@use "components/navigation/bar.scss";
+@use "components/navigation/rail.scss";
+@use "components/navigation/drawer.scss";
 // Button components
-@use "components/buttons/common";
-@use "components/buttons/fab";
-@use "components/buttons/icon";
+@use "components/buttons/common.scss";
+@use "components/buttons/fab.scss";
+@use "components/buttons/icon.scss";
 // Custom components
-@use "custom/titlebar";
-@use "custom/content";
-@use "custom/gallery";
+@use "custom/titlebar.scss";
+@use "custom/content.scss";
+@use "custom/gallery.scss";
+@use "custom/navigation.scss";
 // Other, smaller components
-@use "components/divider";
-@use "components/cards";
+@use "components/divider.scss";
+@use "components/cards.scss";
 // Layouts for different screen sizes
-@use "layouts/all" as layouts;
+@use "layouts/all.scss" as layouts;
 
 
 // UNIVERSAL STYLES
@@ -44,6 +45,7 @@ p {
 body {
     background-color: $surface;
     margin: 0px;
+    padding: 0px;
 
     position: absolute;
     z-index: -2;

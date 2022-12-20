@@ -1,0 +1,23 @@
+@use "material/theme" as *;
+@use "components/navigation/bar";
+@use "components/navigation/rail";
+
+// Automatically switches between navigation rail and navigation bar depending on screen size
+.navigation {
+    // Smol screen
+    @media (max-width: 599px) {
+        @include bar.navigation_bar();
+
+        // Hamburger menu & FAB shouldn't appear on nav bars, just nav rails
+        > .hamburger {
+            display: none;
+        }
+        > .fab {
+            display: none;
+        }
+    }
+    // Unsmol screen
+    @media (min-width: 600px) {
+        @include rail.navigation_rail();
+    }
+}

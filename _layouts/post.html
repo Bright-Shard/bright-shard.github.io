@@ -14,10 +14,7 @@
         </div>
         
         <div id="content">
-            <div id="blog-content">
-                <h1 id="title">{{ page.title }}</h1>
-                {{ content }}
-            </div>
+            <h1 id="title">{{ page.title }}</h1>
 
             <div id="toc-wrapper" class="card-filled">
                 <h1>In this post...</h1>
@@ -25,6 +22,10 @@
                 <div class="actions">
                     <a class="button-outlined" href="/blog/">View All Posts</a>
                 </div>
+            </div>
+
+            <div id="blog-content">
+                {{ content }}
             </div>
 
             <div id="reading-menu" class="gallery-flex">

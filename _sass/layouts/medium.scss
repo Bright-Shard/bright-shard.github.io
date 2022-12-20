@@ -6,9 +6,9 @@
     // Edit dynamic variables
     :root {
         // Margin is 12px on large screens
-        --margin: 12px;
+        --margin: 12px !important;
         // Show 2 columns in a gallery
-        --columns: 2;
+        --columns: 2 !important;
     }
 
     // Screen layout

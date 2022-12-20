@@ -101,15 +101,64 @@
 }
 // Fancy pressed state animation
 @keyframes pressed {
-    from {width: 0px; height: 0px; left: 50%; top: 50%;}
-    to {width: 100%; height: 100%; left: 0px; top: 0;}
+    from {
+        width: 0px;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0px;
+    }
+}
+// Same as above, but two-dimensional
+@keyframes pressed-bidirectional {
+    from {
+        width: 0px;
+        height: 0px;
+        left: 50%;
+        top: 50%;
+    }
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+    }
 }
 // Mixin to play the fancy pressed state animation
-@mixin fancy_pressed_state() {
+@mixin fancy_pressed_state($bidirectional: false) {
     &:not([disabled]):active::after {
         opacity: $state-pressed;
-        animation-name: pressed;
+
         animation-duration: .6s;
         animation-fill-mode: forwards;
+
+        @if $bidirectional {
+            animation-name: pressed-bidirectional;
+        } @else {
+            animation-name: pressed;
+        }
+    }
+}
+
+// Screen size mixins
+@mixin small_screen {
+    @media (max-width: 599px) {
+        @content
+    }
+}
+@mixin medium_screen {
+    @media (min-width: 600px) and (max-width: 839px) {
+        @content
+    }
+}
+@mixin large_screen {
+    @media (min-width: 840px) {
+        @content
+    }
+}
+@mixin not_small_screen {
+    @media (min-width: 600px) {
+        @content
     }
 }

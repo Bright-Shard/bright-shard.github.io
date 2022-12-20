@@ -2,7 +2,15 @@
 
 // Basic styling for the title, subtitle, and social icons
 #titlebar {
-    font-size: $display-medium;
+    @include large_screen {
+        font-size: $display-large;
+    }
+    @include medium_screen {
+        font-size: $display-medium;
+    }
+    @include small_screen {
+        font-size: $display-small;
+    }
     color: $primary;
     font-weight: 700;
 

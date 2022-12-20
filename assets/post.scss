@@ -7,18 +7,23 @@
     @include not_small_screen {
         display: grid;
         grid-template-columns: 1fr 350px;
+        grid-template-rows: auto auto auto;
 
         > #title {
             grid-column: 1;
+            grid-row: 1;
         }
         > #blog-content {
             grid-column: 1;
-        }
-        > #toc-wrapper {
-            grid-column: 1;
+            grid-row: 2;
         }
         > #reading-menu {
             grid-column: 1 / span 2;
+            grid-row: 3;
+        }
+        > #toc-wrapper {
+            grid-column: 2;
+            grid-row: 1 / span 3;
         }
     }
 }
@@ -29,6 +34,7 @@
     margin: 0px !important;
     margin-bottom: 10px !important;
     text-align: center;
+    height: min-content;
 }
 #blog-content {
     display: flex;
@@ -100,7 +106,7 @@
         top: var(--margin);
     }
     @include small_screen {
-        width: 500px;
+        width: 100%;
         display: block;
         margin: 0px auto;
         margin-bottom: 20px;

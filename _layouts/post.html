@@ -20,7 +20,7 @@
                 <h1>In this post...</h1>
                 {% include toc.html html=content id='toc' %}
                 <div class="actions">
-                    <a class="button-outlined" href="/blog/">View All Posts</a>
+                    <a class="button-outlined" href="/blog">View All Posts</a>
                 </div>
             </div>
 
@@ -36,7 +36,7 @@
                         <h2>{{ previous.title }}</h2>
                         <p>{% include desc.html content=previous.content %}</p>
                         <div class="actions">
-                            <a class="button-text" href="/blog/">All Posts</a>
+                            <a class="button-text" href="/blog">All Posts</a>
                             <a class="button-outlined" href="{{ previous.url }}">Read Post</a>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                         <h2>{{ next.title }}</h2>
                         <p>{% include desc.html content=next.content %}</p>
                         <div class="actions">
-                            <a class="button-text" href="/blog/">All Posts</a>
+                            <a class="button-text" href="/blog">All Posts</a>
                             <a class="button-outlined" href="{{ next.url }}">Read Post</a>
                         </div>
                     </div>

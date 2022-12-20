@@ -2,18 +2,7 @@
 
 // Basic styling for the title, subtitle, and social icons
 #titlebar {
-    @include large_screen {
-        font-size: $display-large;
-    }
-    @include medium_screen {
-        font-size: $display-medium;
-    }
-    @include small_screen {
-        font-size: $display-small;
-    }
     color: $primary;
-    font-weight: 700;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,8 +17,16 @@
     }
 }
 
+#title {
+    font-weight: 500;
+    display: grid;
+    grid-template-rows: auto auto;
+    font-size: var(--titlebar-title-size);
+}
 #subtitle {
     font-weight: 300;
+    font-size: var(--titlebar-subtitle-size);
+    grid-row: 2;
 }
 
 @include not_small_screen {
@@ -71,7 +68,7 @@
             color: $on-surface;
             font-size: $body-large;
             font-weight: $body-font;
-            padding: 7px;
+            padding: 15px;
             @include state_layer($on-surface, 16px);
             @include hovered_state();
             @include focused_state();

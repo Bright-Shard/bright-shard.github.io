@@ -35,8 +35,8 @@
     }
     // Headline
     & > h1 {
-        font-weight: $display-font;
-        font-size: $display-small;
+        font-weight: var(--header-1-weight);
+        font-size: var(--header-2-size);
         margin: 0px;
     }
     // Subhead

@@ -1,23 +1,6 @@
-.gallery {
-    --columns: 1fr 1fr 1fr;
-    --row-size: 250px;
+@use "material/theme" as *;
 
-    display: grid;
-    grid-template-columns: var(--columns);
-    grid-auto-rows: var(--row-size);
-    gap: 8px;
-}
-.gallery-vertical {
-    --rows: 1fr 1fr 1fr;
-    --column-size: 250px;
-
-    display: grid;
-    grid-template-rows: var(--columns);
-    grid-auto-columns: var(--row-size);
-    gap: 8px;
-}
 .gallery-flex {
-    --columns: 3;
     --column-size: calc(calc(100% - calc(8px * calc(var(--columns) - 1))) / var(--columns));
 
     display: flex;

@@ -1,5 +1,11 @@
+@use "material/theme" as *;
+
 // Navigation rail
 .navigation-rail {
+    @media (max-width: 599px) {
+        // On small screens, change the nav rail to a nav bar
+        //@extend .navigation-bar;
+    }
     position: fixed;
     height: 100%;
     width: 80px;

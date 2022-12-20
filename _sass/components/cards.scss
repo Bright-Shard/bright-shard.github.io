@@ -1,3 +1,5 @@
+@use "material/theme" as *;
+
 // Common styles - only the colours/borders really changes between all 3
 .card-elevated, .card-filled, .card-outlined {
     // Round corners

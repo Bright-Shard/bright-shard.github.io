@@ -1,8 +1,10 @@
+@use "material/theme" as *;
+
 .divider {
     --margin: 28px;
     
     height: 0px;
-    width: calc($width - calc(var(--margin) * 2));
+    width: calc(var(--width) - calc(var(--margin) * 2));
     margin: var(--margin);
     border-style: solid;
     border-width: 0px;

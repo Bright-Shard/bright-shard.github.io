@@ -1,10 +1,8 @@
 ---
 ---
 
-@import "main";
-@import "variables";
+@use "material/theme" as *;
 
-// Blog stuffs
 #content {
     display: grid;
     grid-template-columns: 1fr 350px;
@@ -70,15 +68,15 @@
 #reading-menu {
     --columns: 2;
     
-    margin-top: $margin;
+    margin-top: var(--margin);
 
     grid-column: 1 / span 2;
 }
 #toc-wrapper {
     height: min-content;
     position: sticky;
-    right: $margin;
-    top: $margin;
+    right: var(--margin);
+    top: var(--margin);
 
     ul {
         padding: 5px 16px;

@@ -1,0 +1,16 @@
+// Screens between 600px and 839px
+
+@use "large.scss";
+
+@mixin medium_screen() {
+    // Edit dynamic variables
+    :root {
+        // Margin is 12px on large screens
+        --margin: 12px;
+        // Show 2 columns in a gallery
+        --columns: 2;
+    }
+
+    // Screen layout
+    @include large.large_layout();
+}

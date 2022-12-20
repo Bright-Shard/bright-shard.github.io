@@ -1,3 +1,5 @@
+@use "material/theme" as *;
+
 // ========== COMMON (ENABLED STATE) STYLES ==========
 .button-elevated, .button-filled, .button-tonal, .button-outlined, .button-text {
     // Flexbox for text & icon

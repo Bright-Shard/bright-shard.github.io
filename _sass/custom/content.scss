@@ -1,3 +1,5 @@
+@use "material/theme" as *;
+
 :root {
     // Smooth scrolling, for table of contents/jumping around the page
     scroll-behavior: smooth;
@@ -9,22 +11,22 @@
 
     font-weight: $body-font;
     color: $on-surface;
-    padding-right: $margin;
-    padding-bottom: $margin;
+    padding-right: var(--margin);
+    padding-bottom: var(--margin);
     width: 100%;
 
     > h1 {
         font-size: $display-medium;
         font-weight: $display-font;
         margin: 0;
-        margin-bottom: $margin;
+        margin-bottom: var(--margin);
     }
 
     > h2 {
         font-size: $display-small;
         font-weight: $display-font;
         margin: 0;
-        margin-bottom: calc($margin / 2);
+        margin-bottom: calc(var(--margin) / 2);
     }
 
     > p {

@@ -1,3 +1,5 @@
+@use "material/theme" as *;
+
 // Floating Action Button (FAB)
 .fab, .fab-large {
     background-color: $primary-container;

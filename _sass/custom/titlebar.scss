@@ -1,3 +1,5 @@
+@use "material/theme" as *;
+
 // Basic styling for the title, subtitle, and social icons
 #titlebar {
     font-size: $display-large;
@@ -12,7 +14,7 @@
     position: absolute;
     z-index: -2;
     padding: 0px;
-    padding-right: $margin;
+    padding-right: var(--margin);
 
     a {
         color: inherit;

@@ -1,7 +1,8 @@
 ---
 ---
 
-@use "material/theme" as *;
+@use "material/variables" as *;
+@use "material/mixins" as *;
 
 #content {
     @include not_small_screen {
@@ -27,8 +28,8 @@
         }
     }
 }
-#title {
-    font-size: $display-large !important;
+#post-title {
+    font-size: var(--titlebar-title-size) !important;
     font-weight: $display-font !important;
     display: block !important;
     margin: 0px !important;
@@ -45,29 +46,22 @@
     align-items: flex-start;
     
     > h1 {
-        font-size: $display-medium;
-        font-weight: $display-font;
+        font-size: var(--header-1-size);
+        font-weight: var(--header-1-weight);
         margin-top: 75px;
         margin-bottom: 10px;
     }
 
     > h2 {
-        font-size: $display-small;
-        font-weight: $display-font;
+        font-size: var(--header-2-size);
+        font-weight: var(--header-2-weight);
         margin-top: 30px;
         margin-bottom: 5px;
     }
 
-    > h3 {
-        font-size: $headline-large;
-        font-weight: $headline-font;
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
-
     > p {
-        font-size: $body-large;
-        font-weight: $body-font;
+        font-size: var(--body-size);
+        font-weight: var(--body-weight);
         width: 100%;
     }
 
@@ -77,8 +71,8 @@
     }
 
     li {
-        font-size: $body-large;
-        font-weight: $body-font;
+        font-size: var(--body-size);
+        font-weight: var(--body-weight);
         margin-bottom: 7px;
     }
 
@@ -89,6 +83,11 @@
 }
 #reading-menu {
     --columns: 2;
+
+    @include small_screen {
+        flex-direction: column;
+        --column-size: 100%;
+    }
     
     margin-top: var(--margin);
 
@@ -104,6 +103,7 @@
         position: sticky;
         right: var(--margin);
         top: var(--margin);
+        z-index: 1;
     }
     @include small_screen {
         width: 100%;

@@ -43,15 +43,15 @@ My GitHub Pages site (WIP).
     - [ ] Zebracorns
 - [ ] Home page
   - [ ] Fancy animations for the landing page
-- [ ] Responsive layout
+- [x] Responsive layout
   - [x] Large screens
-  - [ ] Medium screens
-    - [ ] Decrease margin size
-    - [ ] Reduce the number of gallery items (eg 1 or 2 per row instead of 3)
-  - [ ] Small screens
-    - [ ] Switch navigation rail for navigation bar
-    - [ ] Decrease margin size
-    - [ ] Reduce the number of gallery items (eg 1 or 2 per row instead of 3)
+  - [x] Medium screens
+    - [x] Decrease margin size
+    - [x] Reduce the number of gallery items (eg 1 or 2 per row instead of 3)
+  - [x] Small screens
+    - [x] Switch navigation rail for navigation bar
+    - [x] Decrease margin size
+    - [x] Reduce the number of gallery items (eg 1 or 2 per row instead of 3)
 - [ ] Material 3 Jekyll theme
   - [ ] Finish Material 3 components (see [components.md](components.md))
   - [ ] Make a custom Jekyll theme with Material 3 components

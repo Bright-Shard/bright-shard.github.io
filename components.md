@@ -37,11 +37,11 @@ All of the currently implemented Material 3 components, as well as planned Mater
       - [x] Hovered
       - [x] Focused
       - [x] Pressed
-  - [ ] Floating Action Button (FAB)
+  - [x] Floating Action Button (FAB)
     - [x] Enabled
     - [x] Hovered
-    - [ ] Focused
-    - [ ] Pressed
+    - [x] Focused
+    - [x] Pressed
   - [ ] Extended FAB
     - [ ] Enabled
     - [ ] Hovered
@@ -99,9 +99,7 @@ All of the currently implemented Material 3 components, as well as planned Mater
     - [x] Text
     - [x] Action row
     - [x] Enabled
-    - [ ] Disabled
-      - [x] Disable self
-      - [ ] Disable child components
+    - [x] Disabled
     - [x] Hovered
     - [ ] Focused
     - [ ] Pressed
@@ -112,9 +110,7 @@ All of the currently implemented Material 3 components, as well as planned Mater
     - [x] Text
     - [x] Action row
     - [x] Enabled
-    - [ ] Disabled
-      - [x] Disable self
-      - [ ] Disable child components
+    - [x] Disabled
     - [x] Hovered
     - [ ] Focused
     - [ ] Pressed
@@ -125,9 +121,7 @@ All of the currently implemented Material 3 components, as well as planned Mater
     - [x] Text
     - [x] Action row
     - [x] Enabled
-    - [ ] Disabled
-      - [ ] Disable self
-      - [ ] Disable child components
+    - [x] Disabled
     - [ ] Hovered
     - [ ] Focused
     - [ ] Pressed
@@ -144,11 +138,11 @@ All of the currently implemented Material 3 components, as well as planned Mater
 - [x] Divider
 - [ ] Lists (not planned)
 - [ ] Menus (not planned)
-- [ ] Navigation Bar
-  - [ ] Enabled
-  - [ ] Hovered
-  - [ ] Focused
-  - [ ] Pressed
+- [x] Navigation Bar
+  - [x] Enabled
+  - [x] Hovered
+  - [x] Focused
+  - [x] Pressed
 - [x] Navigation Drawer
   - [x] Standard
     - [x] Section headers
@@ -179,8 +173,4 @@ All of the currently implemented Material 3 components, as well as planned Mater
 - [ ] Tabs (not planned)
 - [ ] Text Field (not planned)
 - [ ] Time Picker (not planned)
-- [ ] Top App Bar
-  - [ ] Center-aligned
-  - [ ] Small
-  - [ ] Medium
-  - [ ] Large
+- [ ] Top App Bar (not planned)

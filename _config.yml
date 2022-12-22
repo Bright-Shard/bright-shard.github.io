@@ -28,3 +28,7 @@ feed:
   categories:
     - updates
     - tutorials
+
+# SCSS/SASS config
+sass:
+  style: compressed

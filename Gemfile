@@ -12,7 +12,7 @@ gem "jekyll", "~> 4.3.1"
 # Use a newer version of jekyll-sass-converter, for up-to-date SASS
 # Once jekyll-sass-converter v3 comes out, this won't be necessary. However,
 #  v2 (the current version) doesn't support @use in SCSS, which this site uses.
-gem "jekyll-sass-converter", git: "https://github.com/jekyll/jekyll-sass-converter.git"
+gem "jekyll-sass-converter", "~> 3.0"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.

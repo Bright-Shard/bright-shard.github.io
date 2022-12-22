@@ -61,6 +61,7 @@
         top: 80px;
         right: var(--margin);
         background-color: $surface-2;
+        box-shadow: $shadow;
         padding: 10px;
         @include round(16px);
 

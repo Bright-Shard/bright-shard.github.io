@@ -8,14 +8,13 @@
 
 <!-- Stupid stuff I wish didn't exist -->
 {% capture header_title %}BrightShard | {{ include.title }}{% endcapture %}
-{% capture header_description_raw %}{% include desc.html content=page.content %}{% endcapture %}
-{% assign header_description = description_raw | strip_html %}
+{% capture header_description %}{% include desc.html content=page.content %}{% endcapture %}
 
 <title>{{ header_title }}</title>
 <meta name="description" content="{{ header_description }}" />
 <meta name="author" content="BrightShard" />
 
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ header_title }}" />
 <meta name="twitter:description" content="{{ header_description }}" />
 

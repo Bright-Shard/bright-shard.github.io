@@ -1,7 +1,7 @@
 <div class="gallery-flex" id="blog-posts" style="--row-size: min-content;">
     {% for post in include.posts %}
         <div class="card-elevated">
-            <img class="banner" src="{{ post.image }}">
+            <img class="banner" src="/{{ post.image }}">
             <h1>{{ post.title }}</h1>
             <p>{% include desc.html content=post.content %}</p>
             <div class="actions">

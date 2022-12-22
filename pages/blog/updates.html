@@ -7,5 +7,10 @@ order: 1
 ---
 
 <h1>Blog Posts: Project Updates</h1>
+<!--desc.start-->
+<p>These are just my blog posts about updates on my projects.</p>
+<!--desc.end-->
+<br>
+
 {% assign posts = site.posts | where: "category", "updates" %}
 {% include blog-layout.html posts=posts %}

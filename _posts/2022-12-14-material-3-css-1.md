@@ -2,7 +2,7 @@
 layout: post
 parent: blog.html
 title: Pure CSS Material 3 (Part 1)
-image: /assets/blog-banners/material.png
+image: assets/blog-banners/material.png
 category: tutorials
 ---
 

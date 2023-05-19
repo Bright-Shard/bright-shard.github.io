@@ -1,1 +1,1 @@
-{{ include.content | split: "<!--desc.start-->" | last | split: "<!--desc.end-->" | first | markdownify }}
+{{ include.content | split: "<!--desc.start-->" | last | split: "<!--desc.end-->" | first | xml_escape }}

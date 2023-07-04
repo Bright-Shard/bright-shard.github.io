@@ -74,7 +74,12 @@
     // Disabled state
     @include disabled_state();
     // Hover state
-    @include hovered_state($state-hovered, $shadow-1);
+    // Technically, the state layer is supposed to activate, making the card lighter in colour.
+    // I personally think this looks terrible, and only do the shadow instead.
+    // @include hovered_state($state-hovered, $shadow-1);
+    &:not([disabled]):hover {
+        box-shadow: $shadow-1;
+    }
 
 }
 

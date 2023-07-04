@@ -8,7 +8,7 @@
 
 <!-- Stupid stuff I wish didn't exist -->
 {% capture header_title %}BrightShard | {{ include.title }}{% endcapture %}
-{% capture header_description %}{% include desc.html content=page.content %}{% endcapture %}
+{% capture header_description %}{% include desc.html content=page.content xml_escape=true %}{% endcapture %}
 
 <title>{{ header_title }}</title>
 <meta name="description" content="{{ header_description }}" />
@@ -22,7 +22,7 @@
 <meta property="og:description" content="{{ header_description }}" />
 
 {% if page.image %}
-    {% capture header_image %}https://brightshard.dev/{{ page.image }}{% endcapture %}
-    <meta name="twitter:image" content="{{ header_image }}" />
-    <meta property="og:image" content="{{ header_image }}" />
+{% capture header_image %}https://brightshard.dev/{{ page.image }}{% endcapture %}
+<meta name="twitter:image" content="{{ header_image }}" />
+<meta property="og:image" content="{{ header_image }}" />
 {% endif %}

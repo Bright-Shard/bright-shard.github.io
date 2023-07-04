@@ -4,8 +4,7 @@ permalink: /projects
 title: My Projects
 navbar: enabled
 order: 2
-icon: <svg width="32" height="32" viewBox="0 0 512 512"><rect width="176" height="176" x="48" y="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="20" ry="20"/><rect width="176" height="176" x="288" y="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="20" ry="20"/><rect width="176" height="176" x="48" y="288" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="20" ry="20"/><rect width="176" height="176" x="288" y="288" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="20" ry="20"/></svg>
-icon-active: <svg width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M204 240H68a36 36 0 0 1-36-36V68a36 36 0 0 1 36-36h136a36 36 0 0 1 36 36v136a36 36 0 0 1-36 36Zm240 0H308a36 36 0 0 1-36-36V68a36 36 0 0 1 36-36h136a36 36 0 0 1 36 36v136a36 36 0 0 1-36 36ZM204 480H68a36 36 0 0 1-36-36V308a36 36 0 0 1 36-36h136a36 36 0 0 1 36 36v136a36 36 0 0 1-36 36Zm240 0H308a36 36 0 0 1-36-36V308a36 36 0 0 1 36-36h136a36 36 0 0 1 36 36v136a36 36 0 0 1-36 36Z"/></svg>
+icon: projects
 ---
 
 <!--desc.start-->
@@ -17,16 +16,16 @@ icon-active: <svg width="32" height="32" viewBox="0 0 512 512"><path fill="curre
 
 <div class="gallery-flex">
     {% for project in site.projects %}
-        <div class="card-elevated">
-            {% if project.image %}
-                <img class="banner" src="/assets/project-banners/{{ project.image }}">
-            {% endif %}
-            <h1>{{ project.title }}</h1>
-            <p>{% include desc.html content=project.content %}</p>
-            <div class="actions">
-                <a {% include github.html repo=project.github %} class="button-text">View on GitHub</a>
-                <a href="{{ project.url }}" class="button-outlined">Learn More</a>
-            </div>
+    <div class="card-elevated">
+        {% if project.image %}
+        <img class="banner" src="/assets/project-banners/{{ project.image }}">
+        {% endif %}
+        <h1>{{ project.title }}</h1>
+        <p>{% include desc.html content=project.content %}</p>
+        <div class="actions">
+            <a {% include github.html repo=project.github %} class="button-text">View on GitHub</a>
+            <a href="{{ project.url }}" class="button-outlined">Learn More</a>
         </div>
+    </div>
     {% endfor %}
 </div>
